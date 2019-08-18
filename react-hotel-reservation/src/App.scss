@@ -1,0 +1,64 @@
+$deepBlue : #2D3047;
+.App {
+    background-image: url('./images/backgroundImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 50%;
+    height: 100vh;
+    .topArea{
+        height: calc(100vh - 60px);
+       .navbar{
+        justify-content: center;
+        } 
+    }
+    
+}
+
+.nav-link{
+    color: $deepBlue;
+    font-weight: bolder;
+    margin: 0 10px;
+    img{
+        padding: 0 5px;
+    }
+}
+
+
+.content{
+    img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .logoImage{
+        background: url('./images/logo.png') no-repeat;
+        background-position: -534px -203px;
+        border-radius: 10px;
+        height: 98px;
+        margin: 0 auto;
+        width: 351px;
+    }
+}
+
+.footer{
+    align-items: center;
+    color: rgba($color: #FFFFFF, $alpha: .5);
+    background-color: $deepBlue;
+    display: flex;
+    font-size: 12px;
+    height: 60px;
+    text-align: center;
+    .container-fluid{
+        margin: 0 15px 0 75px;
+        .row{
+            align-items: center;
+        }
+        .langRow{
+            margin: 0 60px;
+            .col{
+                &:not(:last-child){
+                    border-right: 2px solid rgba($color: #FFFFFF, $alpha: .5);
+                }
+            }
+        }
+    }
+}
