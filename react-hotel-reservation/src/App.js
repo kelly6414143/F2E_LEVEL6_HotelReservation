@@ -1,18 +1,27 @@
 import React from 'react';
-import Header from './components/header'
-import Footer from './components/footer'
-import Content from './components/content'
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import Home from './components/home';
+import Footer from './components/footer';
+import InnerPage from './components/innerPage'
+
 // import { Button } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <div className="topArea">
-        <Header></Header>
-        <Content></Content>
+    <Router>
+      <div className="App">
+        <Route exact path='/' component={Home}/>
+        <Route path='/innerPage' component={InnerPage}/>
       </div>
       <Footer></Footer> 
-    </div>
+    </Router>
+    // <div>
+    //     <div className="App">
+
+    //     <Home></Home>
+    //     </div>
+    //     <Footer></Footer> 
+    // </div>
   );
 }
 

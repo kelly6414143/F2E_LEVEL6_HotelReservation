@@ -1,12 +1,23 @@
 $deepBlue : #2D3047;
+$deepGreen: #28614A;
+$ligthGreen:#419D78;
+
+.h4,h4{
+    font-size: 18px !important;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 .App {
-    background-image: url('./images/backgroundImage.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 70% 50%;
-    height: 100vh;
-    .topArea{
+    .home{
+        background-image: url('./images/backgroundImage.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% 50%;
+        font-family:Microsoft JhengHei;
         height: calc(100vh - 60px);
+    }   
+    .topArea{
        .navbar{
         justify-content: center;
         } 
@@ -23,8 +34,50 @@ $deepBlue : #2D3047;
     }
 }
 
+.innerPage{
+    min-height: calc(100vh - 60px); 
+    .header{
+        background-color: $deepBlue;
+        .navbar{
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            .nav-link{
+                color: rgba($color: #FFFFFF, $alpha: .5);
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+        .logoImage{
+            background: url('./images/logo.png') no-repeat;
+            background-position: -215px -83px;
+            border-radius: 10px;
+            height: 47px;
+            width: 166px;
+            background-size: 600px;   
+        }
+    }
+    .content{
+        .roomsRow{
+            .col-7{
+                height: 500px;
+                overflow: hidden;
+            }
+            .col-5{
+                .row{
+                    height: 250px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
 
-.content{
+.topArea .content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 100px;
     img{
         width: 100%;
         vertical-align: middle;
@@ -34,8 +87,69 @@ $deepBlue : #2D3047;
         background-position: -534px -203px;
         border-radius: 10px;
         height: 98px;
-        margin: 0 auto;
+        margin: 50px auto;
         width: 351px;
+    }
+    .roomsTitle{
+        background-color: $deepBlue;
+        color: white;
+        justify-content: center;
+        margin: 0px auto;
+        padding: 5px 0;
+    }
+    .rooms{
+        .col-4{
+            height: 120px;
+            margin: 10px 0;
+            min-width: 200px;
+            overflow: hidden;
+            a:hover{
+                text-decoration: none;
+            }
+            img{
+                box-shadow: 1px 1px 7px 0px #737577
+                
+            }
+            &:hover .roomsCover{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &:hover img{
+                display: none;
+            }
+            .roomsCover{
+                background-color: $deepGreen;
+                cursor: pointer;
+                display: none;
+                font-family:monospace;
+                height: 100%;
+                
+                h4{
+                    color: white;
+                }
+                p{
+                    color: $ligthGreen;
+                }
+                span{
+                    background-color: white;
+                    border-radius: 10px;
+                    color: $deepBlue;
+                    padding: 0 10px;
+                }
+            }
+
+            &:not(:nth-child(2)):not(:nth-child(5)){
+                img{
+                    transform: translate(0,-52%);
+                }
+                .roomsCover{
+                    transform: translate(0,0);
+                }
+            }
+        
+        }
     }
 }
 
@@ -55,8 +169,12 @@ $deepBlue : #2D3047;
         .langRow{
             margin: 0 60px;
             .col{
+                cursor: pointer;
                 &:not(:last-child){
                     border-right: 2px solid rgba($color: #FFFFFF, $alpha: .5);
+                }
+                &:hover{
+                    color: white;
                 }
             }
         }

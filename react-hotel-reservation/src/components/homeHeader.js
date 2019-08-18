@@ -11,7 +11,7 @@ import img_roomservice from './../images/room_service.svg';
 import img_map from './../images/map.svg';
 import img_news from './../images/new.svg';
 
-export default class Header extends Component {
+export default class HomeHeader extends Component {
       render() {
         return (
           <div className="header">
