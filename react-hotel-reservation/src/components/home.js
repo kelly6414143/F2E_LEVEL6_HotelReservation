@@ -21,7 +21,6 @@ export default class Home extends Component {
             })
         }).then(response =>{
             response.json().then(res=>{
-                console.log(res.items)
                 this.setState({
                     hotelRoomData: res.items,
                 });
@@ -35,7 +34,7 @@ export default class Home extends Component {
         if(this.state.hotelRoomData && this.state.hotelRoomData.length>0){
             roomData=this.state.hotelRoomData.map((data,i)=>
             <Col xs="4" key={i}>
-                <Link to="/innerPage">
+                <Link to={`/innerPage/${data.id}`}>
                     <div className="roomsCover">
                         <h4>{data.name}</h4>
                         <p>${data.normalDayPrice} ~ ${data.holidayPrice}</p>

@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
+import DayPicker from 'react-day-picker';
 import InnerPageHeader from './innerPageHeader'
+import 'react-day-picker/lib/style.css';
 // import { Router, Route, Link } from 'react-router'
 import { 
     Container,
@@ -12,21 +14,63 @@ import {
     Progress } from 'reactstrap';
 
 export default class InnerPage extends Component {
+    constructor(props){
+        super(props)
+        this.handleStartDayClick = this.handleStartDayClick.bind(this);
+        this.handleEndDayClick = this.handleEndDayClick.bind(this);
+        this.state={
+            selectedStartDay: null,
+            selectedEndDay:null,
+            hotelRoomData:null
+        }
+    }
+
+    handleStartDayClick(day, { selected }) {
+        this.setState({
+            selectedStartDay: selected ? undefined : day,
+        });
+      }
+      handleEndDayClick(day, { selected }) {
+        this.setState({
+            selectedEndDay: selected ? undefined : day,
+        });
+      }
+
+    componentDidMount = () => {
+        const {match}=this.props
+        fetch(`https://challenge.thef2e.com/api/thef2e2019/stage6/room/${match.params.id}`,
+            {
+            headers: new Headers({
+                'Accept': 'application/json',
+                'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC',
+            })
+        }).then(response =>{
+            response.json().then(res=>{
+                this.setState({
+                    hotelRoomData: res.room[0],
+                });
+            })
+        })
+      }
+
       render() {
+        console.log(this.state.hotelRoomData)
+        // const disabledStartDays = {[new Date(2017, 3, 12), { daysOfWeek: [0, 6] }]}
+        // const disabledEndDays = {
+        // daysOfWeek: [0, 6],
+        // };
         return (
             <div className="innerPage">
                 <div className="topArea">
                     <InnerPageHeader></InnerPageHeader>
                     <div className="content">
                         <Container fluid>
-                            <Row>
+                            <Row className="firstRow">
                                 <Col>
                                     <Row>
                                         <Col>
                                             <span>HOT</span>
-                                        </Col>
-                                        <Col>
-                                            房型名稱:Single Room
+                                            房型名稱:{this.state.hotelRoomData?this.state.hotelRoomData.name:''}
                                         </Col>
                                     </Row>
                                 </Col>
@@ -36,14 +80,14 @@ export default class InnerPage extends Component {
                             </Row>
                             <Row className="roomsRow">
                                 <Col xs="7" >
-                                     <img src="https://images.unsplash.com/photo-1551776235-dde6d482980b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80" alt="Card cap" />
+                                     <img src={this.state.hotelRoomData?this.state.hotelRoomData.imageUrl[0]:''} alt="Card cap" />
                                 </Col>
                                 <Col xs="5">
                                     <Row>
-                                        <img src="https://images.unsplash.com/photo-1526880792616-4217886b9dc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Card cap" />
+                                        <img src={this.state.hotelRoomData?this.state.hotelRoomData.imageUrl[1]:''} alt="Card cap" />
                                     </Row>
                                     <Row>
-                                        <img src="https://images.unsplash.com/photo-1515511856280-7b23f68d2996?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80" alt="Card cap" />
+                                        <img src={this.state.hotelRoomData?this.state.hotelRoomData.imageUrl[2]:''} alt="Card cap" />
                                     </Row>
                                 </Col>
                             </Row>
@@ -55,13 +99,17 @@ export default class InnerPage extends Component {
                                         <Col>
                                             <Row>
                                                 <Col><span>入住時間</span></Col>
-                                                <Col><Input>2019年8月18日</Input></Col>
+                                                <Col><Input type="text" value={this.state.selectedStartDay
+                                                ? this.state.selectedStartDay.toLocaleDateString()
+                                                : 'Please select a day'}></Input></Col>
                                             </Row>
                                         </Col>
                                         <Col>
                                             <Row>
                                                 <Col><span>退房時間</span></Col>
-                                                <Col><Input>2019年8月20日</Input></Col>
+                                                <Col><Input type="text"  value={this.state.selectedEndDay
+                                                ? this.state.selectedEndDay.toLocaleDateString()
+                                                : 'Please select a day'}></Input></Col>
                                             </Row>
                                         </Col>
                                     </Row>
@@ -119,10 +167,18 @@ export default class InnerPage extends Component {
                                 <Col xs="8" >
                                     <Row>
                                         <Col>
-                                            日期選擇器
+                                            <DayPicker
+                                            selectedDays={this.state.selectedStartDay}
+                                            // disabledDays={disabledStartDays}
+                                            onDayClick={this.handleStartDayClick}
+                                            />
                                         </Col>
                                         <Col>
-                                            日期選擇器
+                                            <DayPicker
+                                            selectedDays={this.state.selectedEndDay}
+                                            // disabledDays={disabledEndDays}
+                                            onDayClick={this.handleEndDayClick}
+                                            />
                                         </Col>
                                     </Row>
                                 </Col>

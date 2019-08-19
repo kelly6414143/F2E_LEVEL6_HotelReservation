@@ -1,6 +1,6 @@
 $deepBlue : #2D3047;
 $deepGreen: #28614A;
-$ligthGreen:#419D78;
+$lightGreen:#419D78;
 
 .h4,h4{
     font-size: 18px !important;
@@ -59,15 +59,47 @@ $ligthGreen:#419D78;
         }
     }
     .content{
+        .firstRow{
+            margin-top: 40px;
+            margin-bottom: 20px;
+            span{
+                background-color: red;
+                border-radius: 50px;
+                color: white;
+                font-size: 12px;
+                font-weight: bolder;
+                margin-right: 10px;
+                padding: 3px 7px;
+            }
+            .col{
+                &:nth-child(1) > .row > .col{
+                    display:flex;
+                    align-items: center;
+                }
+                &:nth-child(2){
+                    padding-right: 0;
+                    text-align: right;
+                    button{
+                        background-color: $lightGreen;
+                        border: none;
+                        color: white;
+                        padding: 1px 14px 4px;
+                    }
+                }
+            }
+        }
         .roomsRow{
             .col-7{
-                height: 500px;
+                height: 515px;
                 overflow: hidden;
             }
             .col-5{
                 .row{
                     height: 250px;
                     overflow: hidden;
+                    &:nth-child(1){
+                        margin-bottom: 15px;
+                    }
                 }
             }
         }
@@ -130,7 +162,7 @@ $ligthGreen:#419D78;
                     color: white;
                 }
                 p{
-                    color: $ligthGreen;
+                    color: $lightGreen;
                 }
                 span{
                     background-color: white;

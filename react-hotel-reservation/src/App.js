@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path='/' component={Home}/>
-        <Route path='/innerPage' component={InnerPage}/>
+        <Route path='/innerPage/:id' component={InnerPage}/>
       </div>
       <Footer></Footer> 
     </Router>
