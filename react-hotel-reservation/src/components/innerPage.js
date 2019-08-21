@@ -17,20 +17,36 @@ export default class InnerPage extends Component {
     constructor(props){
         super(props)
         this.handleStartDayClick = this.handleStartDayClick.bind(this);
-        this.handleEndDayClick = this.handleEndDayClick.bind(this);
-        this.state={
-            selectedStartDay: null,
-            selectedEndDay:null,
-            hotelRoomData:null
-        }
+        this.handleEndDayClick = this.handleEndDayClick.bind(this)
+        this.state = {
+          selectedStartDay: null,
+          selectedEndDay:null,
+        };
+        // this.state={
+        //     selectedStartDay: new Date(),
+        //     // selectedEndDay:new Date(),
+        //     hotelRoomData:null
+        // }
     }
 
     handleStartDayClick(day, { selected }) {
         this.setState({
             selectedStartDay: selected ? undefined : day,
-        });
+          });
+        if(this.state.selectedEndDay){
+            if(this.state.selectedEndDay.getTime()<day.getTime()){
+                this.setState({
+                    selectedEndDay:undefined ,
+                  });
+            }
+        }
       }
+    
       handleEndDayClick(day, { selected }) {
+          if(!this.state.selectedStartDay){
+              alert('請先選擇入住日期')
+              return
+          }
         this.setState({
             selectedEndDay: selected ? undefined : day,
         });
@@ -55,10 +71,7 @@ export default class InnerPage extends Component {
 
       render() {
         console.log(this.state.hotelRoomData)
-        // const disabledStartDays = {[new Date(2017, 3, 12), { daysOfWeek: [0, 6] }]}
-        // const disabledEndDays = {
-        // daysOfWeek: [0, 6],
-        // };
+        let disabledEndDays = this.state.selectedStartDay?this.state.selectedStartDay:new Date()
         return (
             <div className="innerPage">
                 <div className="topArea">
@@ -99,15 +112,15 @@ export default class InnerPage extends Component {
                                         <Col>
                                             <Row>
                                                 <Col><span>入住時間</span></Col>
-                                                <Col><Input type="text" value={this.state.selectedStartDay
-                                                ? this.state.selectedStartDay.toLocaleDateString()
-                                                : 'Please select a day'}></Input></Col>
+                                                <Col><Input type="text" readOnly value={this.state.selectedStartDay
+                                                    ? this.state.selectedStartDay.toLocaleDateString()
+                                                    : 'Please select a day'}></Input></Col>
                                             </Row>
                                         </Col>
                                         <Col>
                                             <Row>
                                                 <Col><span>退房時間</span></Col>
-                                                <Col><Input type="text"  value={this.state.selectedEndDay
+                                                <Col><Input type="text" readOnly value={this.state.selectedEndDay
                                                 ? this.state.selectedEndDay.toLocaleDateString()
                                                 : 'Please select a day'}></Input></Col>
                                             </Row>
@@ -121,6 +134,7 @@ export default class InnerPage extends Component {
                                                 <Col><span>客房</span></Col>
                                                 <Col>
                                                     <Input type="select" name="select">
+                                                        <option>0</option>
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -135,6 +149,7 @@ export default class InnerPage extends Component {
                                                 <Col><span>成人</span></Col>
                                                 <Col>
                                                     <Input type="select" name="select">
+                                                        <option>0</option>
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -149,6 +164,7 @@ export default class InnerPage extends Component {
                                                 <Col><span>小孩</span></Col>
                                                 <Col>
                                                     <Input type="select" name="select">
+                                                        <option>0</option>
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -169,29 +185,77 @@ export default class InnerPage extends Component {
                                         <Col>
                                             <DayPicker
                                             selectedDays={this.state.selectedStartDay}
-                                            // disabledDays={disabledStartDays}
                                             onDayClick={this.handleStartDayClick}
-                                            />
+                                            disabledDays={[
+                                                {
+                                                  before: new Date(),
+                                                },
+                                              ]}/>
                                         </Col>
                                         <Col>
                                             <DayPicker
                                             selectedDays={this.state.selectedEndDay}
-                                            // disabledDays={disabledEndDays}
                                             onDayClick={this.handleEndDayClick}
+                                            disabledDays={[
+                                                {
+                                                  before: disabledEndDays,
+                                                },
+                                              ]}
                                             />
                                         </Col>
                                     </Row>
                                 </Col>
                                 <Col xs="4">
                                     <Row>總價 NT3200</Row>
-                                    <Row></Row>
+                                    <Row>
+                                        <Col>
+                                              <div>
+                                                  - wifi:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Wi-Fi']?'有':'無'):''}
+                                              </div>
+                                              <div>
+                                                  - 早餐:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Breakfast']?'有':'無'):''}
+                                              </div>
+                                              <div>
+                                                  - 電視:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Television']?'有':'無'):''}
+                                              </div>
+                                              <div>
+                                                  - 空調:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Air-Conditioner']?'有':'無'):''}
+                                              </div>
+                                              <div>
+                                                  - 冰箱:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Refrigerator']?'有':'無'):''}
+                                              </div>
+                                              <div>
+                                                  - 沙發:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Sofa']?'有':'無'):''}
+                                              </div>
+                                        </Col>
+                                        <Col>
+                                            <div>
+                                                - 漂亮的視野:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Great-View']?'有':'無'):''}
+                                            </div>
+                                            <div>
+                                                - 禁止吸菸:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Smoke-Free']?'有':'無'):''}
+                                            </div>
+                                            <div>
+                                                - 適合兒童:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Child-Friendly']?'有':'無'):''}
+                                            </div>
+                                            <div>
+                                                - 寵物攜帶:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Pet-Friendly']?'有':'無'):''}
+                                            </div>
+                                            <div>
+                                                - Mini Bar:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Mini-Bar']?'有':'無'):''}
+                                            </div>
+                                            <div>
+                                                - Room Service:{this.state.hotelRoomData?(this.state.hotelRoomData.amenities['Room-Service']?'有':'無'):''}
+                                            </div>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
 
                             <Row>
                                 <Col xs="9">
                                     <Row>
-                                        Single Room is only reserved for one guest. There is a bedroom with a single size bed and a private bathroom. Everything you need prepared for you: sheets and blankets, towels, soap and shampoo, hairdryer are provided. In the room there is AC and of course WiFi.
+                                        {this.state.hotelRoomData?this.state.hotelRoomData.description:''}
                                     </Row>
                                     <Progress value="25" />
                                     <Progress multi>
