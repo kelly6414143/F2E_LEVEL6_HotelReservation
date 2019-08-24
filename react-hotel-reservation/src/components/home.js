@@ -11,22 +11,22 @@ export default class Home extends Component {
         }
     }
     
-    componentDidMount = () => {
+    // componentDidMount = () => {
         
-        fetch('https://challenge.thef2e.com/api/thef2e2019/stage6/rooms',
-            {
-            headers: new Headers({
-                'Accept': 'application/json',
-                'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC',
-            })
-        }).then(response =>{
-            response.json().then(res=>{
-                this.setState({
-                    hotelRoomData: res.items,
-                });
-            })
-        })
-      }
+    //     fetch('https://challenge.thef2e.com/api/thef2e2019/stage6/rooms',
+    //         {
+    //         headers: new Headers({
+    //             'Accept': 'application/json',
+    //             'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC',
+    //         })
+    //     }).then(response =>{
+    //         response.json().then(res=>{
+    //             this.setState({
+    //                 hotelRoomData: res.items,
+    //             });
+    //         })
+    //     })
+    //   }
 
 
       render() {
@@ -43,12 +43,12 @@ export default class Home extends Component {
                     <img key={i} src={data.imageUrl} alt="Card cap" />
                 </Link> */}
                 {/* <Link to={`/innerPage/${data.id}`}> */}
-                    <div className="roomsCover">
+                    {/* <div className="roomsCover">
                         <h4>{data.name}</h4>
                         <p>${data.normalDayPrice} ~ ${data.holidayPrice}</p>
                         <span>more →</span>
                     </div>
-                    <img key={i} src={data.imageUrl} alt="Card cap" />
+                    <img key={i} src={data.imageUrl} alt="Card cap" /> */}
                 {/* </Link> */}
             </Col>
             )
