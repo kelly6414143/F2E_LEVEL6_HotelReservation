@@ -1,6 +1,7 @@
 $deepBlue : #2D3047;
 $deepGreen: #28614A;
 $lightGreen:#419D78;
+$lightPurple: #959CC4;
 
 .h4,h4{
     font-size: 18px !important;
@@ -34,7 +35,48 @@ $lightGreen:#419D78;
     }
 }
 
-.innerPage{
+span.hotTag{
+    background-color: red;
+    border-radius: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    margin-right: 10px;
+    padding: 3px 7px 5px;
+}
+
+a.linkButton{
+    color: white;
+    button{
+        background-color: $lightGreen !important;
+        border: none;
+        border-radius: 0px;
+        padding: 1px 14px 4px;  
+        &:hover{
+            // color: $deepGreen !important;
+            text-decoration: none;
+        }
+    }
+}
+
+.priceRow{
+    color: $deepBlue;
+    font-size: 32px;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    position: relative;
+    span{
+        background-color: $lightPurple;
+        display: block;
+        height: 5px;
+        position: absolute;
+        bottom: 4px;
+        width: 280px;
+        z-index: -1;
+    }
+}
+
+.innerPage,.reservationDetail{
     min-height: calc(100vh - 60px); 
     .header{
         background-color: $deepBlue;
@@ -58,19 +100,15 @@ $lightGreen:#419D78;
             background-size: 600px;   
         }
     }
+}
+
+
+.innerPage{
     .content{
+        >.row{
+            margin:30px 0;
+        }
         .firstRow{
-            margin-top: 40px;
-            margin-bottom: 20px;
-            span{
-                background-color: red;
-                border-radius: 50px;
-                color: white;
-                font-size: 12px;
-                font-weight: bolder;
-                margin-right: 10px;
-                padding: 3px 7px;
-            }
             .col{
                 &:nth-child(1) > .row > .col{
                     display:flex;
@@ -79,16 +117,16 @@ $lightGreen:#419D78;
                 &:nth-child(2){
                     padding-right: 0;
                     text-align: right;
-                    button{
-                        background-color: $lightGreen;
-                        border: none;
-                        color: white;
-                        padding: 1px 14px 4px;
-                    }
                 }
             }
         }
+        .firstRow.row{
+            margin:40px 0 20px;
+        }
+
         .roomsRow{
+            flex-wrap: nowrap !important;
+            margin: 30px 0;
             .col-7{
                 height: 515px;
                 overflow: hidden;
@@ -99,6 +137,138 @@ $lightGreen:#419D78;
                     overflow: hidden;
                     &:nth-child(1){
                         margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .selectRow,.datepickerRow{
+            text-align: right;
+            .row{
+                align-items: center;
+            }
+            .col-5,.col-7{
+                padding: 0;
+                padding-right: 5px;
+            }
+        }
+        .detailRow{
+            border-left:2px solid $deepBlue;
+            padding-left: 5px;
+            div{
+                margin:5px 0;
+            }
+        }
+
+        .describeRow{
+            .row{
+                margin-bottom: 30px;
+            }
+            .checkInProgress{
+                font-size: 12px;
+                .checkInear,.checkInlate{
+                    bottom:25px;
+                    border: 1px solid black;
+                    // left: 0px;
+                    position: absolute;
+                    &:after{
+                        content:"";
+                        border-top: 5px solid black;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        left: 10px;
+                        position: absolute;
+                        top: 18px;
+                    }
+                }
+                .checkInlate{
+                    left: 60px;
+                }
+                .progress-bar{
+                    &:nth-child(1),&:nth-child(3){
+                        background-color: #DCDCDC;
+                    }
+                    &:nth-child(2){
+                        background-color: $lightGreen;
+                    }
+                }
+            }
+    
+            .checkOutProgress{
+                font-size: 12px;
+                #checkOut{
+                    bottom:25px;
+                    border: 1px solid black;
+                    // left: 220px;
+                    position: absolute;
+                    &:after{
+                        content:"";
+                        border-top: 5px solid black;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        left: 10px;
+                        position: absolute;
+                        top: 18px;
+                    }
+                }
+                .progress-bar{
+                    &:nth-child(1){
+                        background-color: $lightPurple ;
+                    }
+                    &:nth-child(2){
+                        background-color: #DCDCDC;
+                    }
+                }
+            }
+
+            .card{
+                background-color: $deepBlue;
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.reservationDetail{
+    .content{
+        &_title{
+            margin: 20px 0;
+        }
+        .firstRow{
+            border: 1px solid $deepBlue;
+            max-height: 300px;
+            overflow: hidden;
+            .row{
+                margin: 0 !important;
+            }
+            >.col-7,.col-5{
+                padding: 0;
+                margin: 0;
+            }
+            >.col-5{
+                border-right: 1px solid $deepBlue;
+            }
+            &_title{
+                background-color: $deepBlue;
+                color: white;
+                padding: 10px 5px 10px 10px;
+                .col-3{
+                    text-align: right;
+                }
+            }
+            &_detail{
+                >.col{
+                    >.row{
+                        margin: 15px 5px !important;
+                    }
+                }
+                &_price{
+                    position: relative;
+                    .priceRow{
+                        bottom: 0px;
+                        right: 5px;
+                        position: absolute;
                     }
                 }
             }
