@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42fbbe24c1a23b2c6b321af485490dd0",
+    "revision": "d15c8ceaee242ba23a5773ab91b6a71d",
     "url": "/F2E_LEVEL6_HotelReservation/index.html"
   },
   {
-    "revision": "0bd618abaad246ca8b06",
-    "url": "/F2E_LEVEL6_HotelReservation/static/css/2.82fb8c21.chunk.css"
+    "revision": "47a1f9e7b51058c29174",
+    "url": "/F2E_LEVEL6_HotelReservation/static/css/2.b9146f23.chunk.css"
   },
   {
-    "revision": "d7bed2819feb0da598f6",
+    "revision": "13fadbbb5007ea5ad723",
     "url": "/F2E_LEVEL6_HotelReservation/static/css/main.4e743b2f.chunk.css"
   },
   {
-    "revision": "0bd618abaad246ca8b06",
-    "url": "/F2E_LEVEL6_HotelReservation/static/js/2.4a4535b7.chunk.js"
+    "revision": "47a1f9e7b51058c29174",
+    "url": "/F2E_LEVEL6_HotelReservation/static/js/2.297949c0.chunk.js"
   },
   {
-    "revision": "d7bed2819feb0da598f6",
-    "url": "/F2E_LEVEL6_HotelReservation/static/js/main.c619a58f.chunk.js"
+    "revision": "13fadbbb5007ea5ad723",
+    "url": "/F2E_LEVEL6_HotelReservation/static/js/main.130bddd3.chunk.js"
   },
   {
     "revision": "3843b9c89840b305d270",
