@@ -6,6 +6,7 @@ import {
     NavLink,
     NavbarBrand} from 'reactstrap';
 import './../App.scss';
+import {Link} from 'react-router-dom';
 import img_person from './../images/person.svg';
 import img_bedroom from './../images/bedroom.svg';
 import img_roomservice from './../images/room_service.svg';
@@ -17,7 +18,9 @@ export default class HomeHeader extends Component {
         return (
           <div className="header">
             <Navbar>
-                <NavbarBrand href="/"><div className="logoImage"></div></NavbarBrand>
+                <Link to={`/`}>
+                    <NavbarBrand><div className="logoImage"></div></NavbarBrand>
+                </Link>
                 <Nav>
                     <NavItem>
                         <NavLink href="#"><img src={img_person} alt="about" />關於我們</NavLink>
