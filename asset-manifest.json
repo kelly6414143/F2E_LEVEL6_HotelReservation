@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/F2E_LEVEL6_HotelReservation/static/css/main.4e743b2f.chunk.css",
+    "main.js": "/F2E_LEVEL6_HotelReservation/static/js/main.67ddab36.chunk.js",
+    "main.js.map": "/F2E_LEVEL6_HotelReservation/static/js/main.67ddab36.chunk.js.map",
+    "runtime~main.js": "/F2E_LEVEL6_HotelReservation/static/js/runtime~main.aef853f6.js",
+    "runtime~main.js.map": "/F2E_LEVEL6_HotelReservation/static/js/runtime~main.aef853f6.js.map",
+    "static/css/2.b9146f23.chunk.css": "/F2E_LEVEL6_HotelReservation/static/css/2.b9146f23.chunk.css",
+    "static/js/2.297949c0.chunk.js": "/F2E_LEVEL6_HotelReservation/static/js/2.297949c0.chunk.js",
+    "static/js/2.297949c0.chunk.js.map": "/F2E_LEVEL6_HotelReservation/static/js/2.297949c0.chunk.js.map",
+    "index.html": "/F2E_LEVEL6_HotelReservation/index.html",
+    "precache-manifest.abbd36b48ba86058969cf43b5bd232e5.js": "/F2E_LEVEL6_HotelReservation/precache-manifest.abbd36b48ba86058969cf43b5bd232e5.js",
+    "service-worker.js": "/F2E_LEVEL6_HotelReservation/service-worker.js",
+    "static/css/2.b9146f23.chunk.css.map": "/F2E_LEVEL6_HotelReservation/static/css/2.b9146f23.chunk.css.map",
+    "static/css/main.4e743b2f.chunk.css.map": "/F2E_LEVEL6_HotelReservation/static/css/main.4e743b2f.chunk.css.map",
+    "static/media/App.scss": "/F2E_LEVEL6_HotelReservation/static/media/logo.a94319e5.png",
+    "static/media/bedroom.svg": "/F2E_LEVEL6_HotelReservation/static/media/bedroom.db939d70.svg",
+    "static/media/map.svg": "/F2E_LEVEL6_HotelReservation/static/media/map.fa3bd6d6.svg",
+    "static/media/new.svg": "/F2E_LEVEL6_HotelReservation/static/media/new.7a95ab0f.svg",
+    "static/media/person.svg": "/F2E_LEVEL6_HotelReservation/static/media/person.21ec2ace.svg",
+    "static/media/room_service.svg": "/F2E_LEVEL6_HotelReservation/static/media/room_service.602bb3ab.svg"
+  }
+}
