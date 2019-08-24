@@ -11,6 +11,7 @@ import reservationDetail from './components/reservationDetail'
 function App() {
   return (
     <BrowserRouter>
+    111
       <div className="App">
         <Route exact path='/' component={Home}/>
         <Route path='/innerPage/:id' component={InnerPage}/>
