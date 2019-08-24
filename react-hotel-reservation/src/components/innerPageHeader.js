@@ -18,7 +18,7 @@ export default class HomeHeader extends Component {
         return (
           <div className="header">
             <Navbar>
-                <Link to={`/`}>
+                <Link to={`/home`}>
                     <NavbarBrand><div className="logoImage"></div></NavbarBrand>
                 </Link>
                 <Nav>

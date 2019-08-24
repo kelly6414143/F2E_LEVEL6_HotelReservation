@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter,Route} from 'react-router-dom';
+import {HashRouter,Route,Redirect} from 'react-router-dom';
 import Home from './components/home';
 import Footer from './components/footer';
 import InnerPage from './components/innerPage'
@@ -15,6 +15,8 @@ function App() {
         <Route exact path='/' component={Home}/>
         <Route path='/innerPage/:id' component={InnerPage}/>
         <Route path='/reservationDetail' component={reservationDetail}/>
+        {/* <Redirect from={`/`} to={`/home`}></Redirect> */}
+        {/* <Route path='*' component={ErrorPage}/> */}
       </div>
       <Footer></Footer> 
     </HashRouter>

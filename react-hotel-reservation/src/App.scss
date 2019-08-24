@@ -263,6 +263,10 @@ a.linkButton{
                         margin: 15px 5px !important;
                     }
                 }
+                .noBreakfast{
+                    color: red;
+                    font-weight: bold;
+                }
                 &_price{
                     position: relative;
                     .priceRow{
@@ -271,6 +275,41 @@ a.linkButton{
                         position: absolute;
                     }
                 }
+            }
+        }
+        
+        form{
+            border: 1px solid $deepBlue;
+            margin: 100px 0;
+            padding: 20px 30px 20px 80px;
+            position: relative;
+            .reservationTag{
+                background-color: $deepBlue;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                color: white;
+                left: 0;
+                padding: 10px 20px;
+                position: absolute;
+                top: -45px;
+            }
+            .extraService{
+                border-bottom: 3px solid $lightGreen;
+                color: $lightGreen;
+                margin: 10px -10px;
+                padding-bottom: 5px; 
+            }
+            .radioGroup{
+                color: $lightGreen;
+                .form-check{
+                    margin: 5px 0;
+                }
+            }
+            .linkButton{
+                bottom: 20px;
+                text-align: right;
+                position: absolute;
+                right: 30px;
             }
         }
     }
