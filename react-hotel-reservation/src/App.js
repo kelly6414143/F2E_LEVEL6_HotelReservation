@@ -10,15 +10,17 @@ import reservationDetail from './components/reservationDetail'
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <div>
       <Home></Home>
-      {/* <div className="App">
-        <Route exact path='/' component={Home}/>
-        <Route path='/innerPage/:id' component={InnerPage}/>
-        <Route path='/reservationDetail' component={reservationDetail}/>
-      </div> */}
+        {/* <div className="App">
+          <Route exact path='/' component={Home}/>
+          <Route path='/innerPage/:id' component={InnerPage}/>
+          <Route path='/reservationDetail' component={reservationDetail}/>
+        </div> */}
       <Footer></Footer> 
-    </BrowserRouter>
+    </div>
+    // </BrowserRouter>
     // <div>
     //     <div className="App">
 

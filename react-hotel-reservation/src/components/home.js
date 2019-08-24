@@ -34,14 +34,22 @@ export default class Home extends Component {
         if(this.state.hotelRoomData && this.state.hotelRoomData.length>0){
             roomData=this.state.hotelRoomData.map((data,i)=>
             <Col xs="4" key={i}>
-                <Link to={`/innerPage/${data.id}`}>
+                {/* <Link to={`/innerPage/${data.id}`}>
                     <div className="roomsCover">
                         <h4>{data.name}</h4>
                         <p>${data.normalDayPrice} ~ ${data.holidayPrice}</p>
                         <span>more →</span>
                     </div>
                     <img key={i} src={data.imageUrl} alt="Card cap" />
-                </Link>
+                </Link> */}
+                {/* <Link to={`/innerPage/${data.id}`}> */}
+                    <div className="roomsCover">
+                        <h4>{data.name}</h4>
+                        <p>${data.normalDayPrice} ~ ${data.holidayPrice}</p>
+                        <span>more →</span>
+                    </div>
+                    <img key={i} src={data.imageUrl} alt="Card cap" />
+                {/* </Link> */}
             </Col>
             )
         }
