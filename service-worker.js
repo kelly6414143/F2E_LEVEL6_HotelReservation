@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/F2E_LEVEL6_HotelReservation/precache-manifest.345ea701325568a1b04fa9665869987a.js"
+  "/F2E_LEVEL6_HotelReservation/precache-manifest.0a63b1806527afb024d1d357a5482bae.js"
 );
 
 self.addEventListener('message', (event) => {
