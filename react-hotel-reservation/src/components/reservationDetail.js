@@ -71,8 +71,8 @@ export default class reservationDetail extends Component {
                                 </Col>
                             </Row>
 
-
-                            <Form>
+                            <Row>正在趕工中</Row>
+                            {/* <Form>
                                 <FormGroup>
                                     <Label for="exampleEmail">Input without validation</Label>
                                     <Input />
@@ -109,7 +109,7 @@ export default class reservationDetail extends Component {
                                     <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
                                     <FormText>Example help text that remains unchanged.</FormText>
                                     </FormGroup>
-                                </Form>
+                                </Form> */}
                     </div>
                 </div>
             </div>
