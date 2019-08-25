@@ -224,8 +224,8 @@ export default class InnerPage extends Component {
             
         }
 
-        // let linkBtnDisable = this.state.adultNum>0 && this.state.childNum>=0 && this.state.selectedStartDay && this.state.selectedEndDay && this.state.roomNum>0 ? false : true
-        let linkBtnDisable=false
+        let linkBtnDisable = this.state.adultNum>0 && this.state.childNum>=0 && this.state.selectedStartDay && this.state.selectedEndDay && this.state.roomNum>0 ? false : true
+        // let linkBtnDisable=false
 
         return (
             <div className="innerPage">

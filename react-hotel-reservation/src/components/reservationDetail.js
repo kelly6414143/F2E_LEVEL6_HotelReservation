@@ -20,7 +20,7 @@ export default class reservationDetail extends Component {
         super(props)
         this.handleStartDayChange = this.handleStartDayChange.bind(this)
         this.handleEndDayChange = this.handleEndDayChange.bind(this)
-        this.submit = this.submit.bind(this)
+        this.submitReservation = this.submitReservation.bind(this)
         // this.validEmail=this.validEmail.bind(this);
         this.state = {
             roomDetail : this.props.location.state,
@@ -139,7 +139,7 @@ export default class reservationDetail extends Component {
         });
     }
 
-    submit(){
+    submitReservation(){
         alert('完善驗證綁定中')
         // function formatTime(time){
         //     let formatTime = time.split('/')
@@ -193,7 +193,7 @@ export default class reservationDetail extends Component {
                     <InnerPageHeader></InnerPageHeader>
                     <div className="content">
                        <h3 className="content_title">．訂單內容</h3>
-                           {/* <Row className="firstRow">
+                           <Row className="firstRow">
                                 <Col xs="5">
                                     <img src={this.state.roomDetail.roomImg} alt="roomImg"/>
                                 </Col>
@@ -229,7 +229,7 @@ export default class reservationDetail extends Component {
                                         </Col>
                                     </Row>
                                 </Col>
-                            </Row> */}
+                            </Row>
 
                             <Form>
                                 <span className="reservationTag">訂房資料</span>
@@ -322,7 +322,7 @@ export default class reservationDetail extends Component {
                                     </FormGroup>
                                 </FormGroup>
                                 <Link className="linkButton" to="">
-                                    <Button disabled={false} onClick={this.submit}>確認訂房</Button>
+                                    <Button disabled={false} onClick={this.submitReservation}>確認訂房</Button>
                                 </Link>
                             </Form>
                     </div>
