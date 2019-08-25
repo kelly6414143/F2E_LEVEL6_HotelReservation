@@ -289,6 +289,15 @@ a.linkButton{
             margin: 100px 0;
             padding: 20px 30px 20px 80px;
             position: relative;
+            .datePickerRow{
+                align-items: center;
+                .col-md-4{
+                    &:last-child{
+                        color: $lightGreen;
+                    }
+                }
+                
+            }
             .reservationTag{
                 background-color: $deepBlue;
                 border-top-right-radius: 5px;
@@ -308,6 +317,8 @@ a.linkButton{
             .radioGroup{
                 color: $lightGreen;
                 .form-check{
+                    display: flex;
+                    flex-direction: column;
                     margin: 5px 0;
                 }
             }
