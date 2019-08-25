@@ -18,51 +18,182 @@ import {
 export default class reservationDetail extends Component {
     constructor(props){
         super(props)
-        this.handleDayChange = this.handleDayChange.bind(this);
+        this.handleStartDayChange = this.handleStartDayChange.bind(this)
+        this.handleEndDayChange = this.handleEndDayChange.bind(this)
+        this.submit = this.submit.bind(this)
         // this.validEmail=this.validEmail.bind(this);
         this.state = {
             roomDetail : this.props.location.state,
-            // interval:null,
-            // emailinValid:false,
-            // emailValid:false,
-            selectedDay: undefined,
+            formSex:'W',
+            formFirstname:'',
+            formLastname:'',
+            formTel:'',
+            formEmail: '',
+            formCheckEmail: '',
+            formExtraService:'',
+            endDayFirstDate:'',
+            fisrtNameValid:false,
+            fisrtNameinValid:false,
+            lastNameValid:false,
+            lastNameinValid:false,
+            emailinValid:false,
+            emailValid:false,
+            selectedStartDay: undefined,
+            selectedEndDay: undefined,
             isEmpty: true,
             isDisabled: false,
         };
        
     }
 
-    handleDayChange(selectedDay, modifiers, dayPickerInput) {
-        const input = dayPickerInput.getInput();
+    handleStartDayChange(day, { selected }) {
         this.setState({
-          selectedDay,
-          isEmpty: !input.value.trim(),
-          isDisabled: modifiers.disabled === true,
+            selectedStartDay: selected ? undefined : day,
+            endDayFirstDate: selected ? undefined : day.getTime()+24*60*60*1000
+          });
+        if(this.state.selectedEndDay){
+            if(this.state.selectedEndDay.getTime()<=day.getTime()+24*60*60*1000){
+                this.setState({
+                    selectedEndDay:undefined ,
+                  });
+                  this.computedPricePerRoom(
+                    day.getDay(),
+                    day.getTime(),
+                    undefined,
+                    undefined
+                  )
+            }else{
+                this.computedPricePerRoom(
+                    day.getDay(),
+                    day.getTime(),
+                    this.state.selectedEndDay.getDay(),
+                    this.state.selectedEndDay.getTime()
+                  )
+            }
+            
+        }
+      }
+    
+      handleEndDayChange(day, { selected }) {
+          if(!this.state.selectedStartDay){
+              alert('請先選擇入住日期')
+              return
+          }
+        this.setState({
+            selectedEndDay: selected ? undefined : day,
         });
       }
 
-    //   validEmail(e){
-    //         //  clearInterval(this.state.interval)
-    //         let value = e.target.value
-    //         console.log(value)
-    //         setTimeout(()=>{
-    //           console.log('inner')
-    //         let valid = /ab+c/
-    //         console.log(valid.test(value))
-    //         // this.validEmail(e)
-    //       },2000)
-    //     //   this.validEmail(e);
-    //   }
+    getFirstName(e){
+        let valid = /^[a-zA-Z,]{1,}$/
+        // console.log(valid.test(e.target.value))
+        this.setState({
+            formFirstname:e.target.value,
+            fisrtNameValid:valid.test(e.target.value),
+            fisrtNameinValid:!valid.test(e.target.value)
+        });
+    }
+    getLastName(e){
+        let valid = /^[a-zA-Z]{1,}$/
+        // console.log(valid.test(e.target.value))
+        this.setState({
+            formLastname:e.target.value,
+            lastNameValid:valid.test(e.target.value),
+            lastNameinValid:!valid.test(e.target.value)
+        });
+    }
+    getSex(e){
+        this.setState({
+            formSex:e.target.value
+        });
+    }
+    getTel(e){
+        this.setState({
+            formTel:e.target.value
+        });
+    }
+    getEmail(e){
+        if(e.target.value){
+            let valid = /\w@[\w.]{1,}[^./<>_+=]$/
+            this.setState({
+                formEmail:e.target.value,
+                emailValid:valid.test(e.target.value),
+                emailinValid:!valid.test(e.target.value)
+            });
+        }else{
+            this.setState({
+                formEmail:e.target.value,
+                emailValid:false,
+                emailinValid:false
+            });
+        }
+    }
+    getCheckEmail(e){
+        this.setState({
+            formCheckEmail:e.target.value
+        });
+    }
+    getExtraServiceSelect(e){
+        this.setState({
+            formExtraService:e.target.value
+        });
+    }
+
+    submit(){
+        alert('完善驗證綁定中')
+        // function formatTime(time){
+        //     let formatTime = time.split('/')
+        //     if(formatTime[1]<10){formatTime[1]=`0${formatTime[1]}`}
+        //     if(formatTime[2]<10){formatTime[2]=`0${formatTime[2]}`}
+        //     return formatTime
+        // }
+
+        // let{
+        //     formSex,
+        //     formFirstname,
+        //     formLastname,
+        //     formTel,
+        //     formEmail,
+        //     formCheckEmail,
+        //     formExtraService,
+        //     selectedStartDay,
+        //     selectedEndDay}=this.state
+        //     selectedStartDay =selectedStartDay?formatTime(selectedStartDay.toLocaleDateString()).join('-') :""
+        //     selectedEndDay = selectedEndDay? formatTime(selectedEndDay.toLocaleDateString()).join('-'):""
+        // let submitData = {
+        //     name: formFirstname + formLastname,
+        //     tel: formTel,
+        //     date: [selectedStartDay,selectedEndDay]
+        // }
+        // // console.log(submitData)
+        // fetch(`https://challenge.thef2e.com/api/thef2e2019/stage6/room/${this.state.roomDetail.id}`,
+        //     {
+        //     method:"POST",
+        //     headers: new Headers({
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json',
+        //         'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC',
+        //     }),
+        //     body: JSON.stringify(submitData)
+        // }).then(response =>{
+        //         return response.json(); 
+        //     }).then((jsonData) => {
+        //         // console.log(jsonData);
+        //     }).catch((error)=>{
+        //         console.log(error)
+        //     })
+    } 
 
       render() {
-        const { selectedDay, isDisabled, isEmpty } = this.state;
+        const { selectedStartDay,selectedEndDay} = this.state;
+        let disabledEndDays = this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date()
         return (
             <div className="reservationDetail">
                 <div className="topArea">
                     <InnerPageHeader></InnerPageHeader>
                     <div className="content">
                        <h3 className="content_title">．訂單內容</h3>
-                           <Row className="firstRow">
+                           {/* <Row className="firstRow">
                                 <Col xs="5">
                                     <img src={this.state.roomDetail.roomImg} alt="roomImg"/>
                                 </Col>
@@ -98,7 +229,7 @@ export default class reservationDetail extends Component {
                                         </Col>
                                     </Row>
                                 </Col>
-                            </Row>
+                            </Row> */}
 
                             <Form>
                                 <span className="reservationTag">訂房資料</span>
@@ -107,12 +238,11 @@ export default class reservationDetail extends Component {
                                         <Label for="exampleEmail">入住日期</Label>
                                         <FormGroup>
                                             <DayPickerInput
-                                                value={selectedDay}
-                                                onDayChange={this.handleDayChange}
+                                                value={selectedStartDay}
+                                                onDayChange={this.handleStartDayChange}
                                                 dayPickerProps={{
-                                                    selectedDays: selectedDay,
                                                     disabledDays: {
-                                                    daysOfWeek: [0, 6],
+                                                        before: new Date(),
                                                     },
                                                 }}
                                             />
@@ -122,12 +252,12 @@ export default class reservationDetail extends Component {
                                         <Label for="exampleEmail">退房日期</Label>
                                         <FormGroup>
                                             <DayPickerInput
-                                                value={selectedDay}
-                                                onDayChange={this.handleDayChange}
+                                                value={selectedEndDay}
+                                                onDayChange={this.handleEndDayChange}
                                                 dayPickerProps={{
-                                                    selectedDays: selectedDay,
+                                                    selectedDays: selectedEndDay,
                                                     disabledDays: {
-                                                    daysOfWeek: [0, 6],
+                                                        before:disabledEndDays
                                                     },
                                                 }}
                                             />
@@ -138,23 +268,23 @@ export default class reservationDetail extends Component {
                                     <Col md={3}>
                                         <FormGroup>
                                             <Label for="exampleEmail">姓氏(英文)</Label>
-                                            <Input valid />
-                                            {/* <FormFeedback valid>Sweet! that name is available</FormFeedback> */}
+                                            <Input valid={this.state.lastNameValid} invalid={this.state.lastNameinValid} value={this.state.formLastname} onChange = {(e) => this.getLastName(e)}/>
+                                            <FormFeedback valid={this.state.lastNameValid}>必須為英文</FormFeedback>
                                         </FormGroup>
                                     </Col>
                                     <Col md={6}>
                                         <FormGroup>
                                             <Label for="examplePassword">姓名(英文)</Label>
-                                            <Input valid />
-                                            {/* <FormFeedback valid>Oh noes! that name is already taken</FormFeedback> */}
+                                            <Input valid={this.state.fisrtNameValid} invalid={this.state.fisrtNameinValid} value={this.state.formFirstname} onChange = {(e) => this.getFirstName(e)}/>
+                                            <FormFeedback valid={this.state.fisrtNameValid}>必填，格式為英文</FormFeedback>
                                         </FormGroup>
                                     </Col>
                                     <Col md={3}>
                                         <FormGroup>
                                             <Label for="exampleEmail">稱謂</Label>
-                                            <Input valid type="select" name="select" id="exampleSelect">
-                                                <option>女士</option>
-                                                <option>男士</option>
+                                            <Input type="select" name="select" id="exampleSelect" value={this.state.formSex} onChange = {(e) => this.getSex(e)}>
+                                                <option value="W">女士</option>
+                                                <option value="M">男士</option>
                                             </Input>
                                             {/* <FormFeedback valid>You will not be able to see this</FormFeedback> */}
                                         </FormGroup>
@@ -164,37 +294,35 @@ export default class reservationDetail extends Component {
                                
                                 <FormGroup>
                                     <Label for="exampleEmail">連絡電話</Label>
-                                    <Input valid />
+                                    <Input  value={this.state.formTel} onChange = {(e) => this.getTel(e)}/>
                                     {/* <FormFeedback valid>Sweet! that name is available</FormFeedback> */}
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="examplePassword">電子信箱</Label>
-                                    <Input invalid={false} valid={true}/>
-                                    {/* <FormFeedback valid={false}>Oh noes! that name is already taken</FormFeedback> */}
+                                    <Input valid={this.state.emailValid} invalid={this.state.emailinValid} value={this.state.formEmail} onChange = {(e) => this.getEmail(e)}/>
+                                    <FormFeedback valid={this.state.emailValid}>信箱格式錯誤，包含＠不得已特殊字元為最後一字元</FormFeedback>
                                     
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="examplePassword">確認信箱</Label>
-                                    <Input invalid={false} valid={true} />
+                                    <Input value={this.state.formCheckEmail} onChange = {(e) => this.getCheckEmail(e)} />
                                     {/* <FormFeedback valid={false}>Oh noes! that name is already taken</FormFeedback> */}
                                 </FormGroup>
                                 <Row className="extraService">額外加價服務</Row>
                                 <FormGroup className="radioGroup"　tag="fieldset">
-                                    <FormGroup check>
+                                    <FormGroup check value={this.state.formExtraService} onChange = {(e) => this.getExtraServiceSelect(e)}>
                                         <Label check>
-                                            <Input type="radio" name="radio1" />{' '}
+                                            <Input type="radio" name="radio1" value="breakfast" />{' '}
                                             早餐&nbsp;&nbsp;&nbsp;$320/1人
                                         </Label>
-                                    </FormGroup>
-                                    <FormGroup check>
                                         <Label check>
-                                            <Input type="radio" name="radio1" />{' '}
+                                            <Input type="radio" name="radio1"  value="driveTour"/>{' '}
                                             租車旅遊&nbsp;&nbsp;&nbsp;$2200/1日
                                         </Label>
                                     </FormGroup>
                                 </FormGroup>
-                                <Link className="linkButton">
-                                    <Button disabled={false}>確認訂房</Button>
+                                <Link className="linkButton" to="">
+                                    <Button disabled={false} onClick={this.submit}>確認訂房</Button>
                                 </Link>
                             </Form>
                     </div>

@@ -33,7 +33,7 @@ export default class Home extends Component {
         let roomData=""
         if(this.state.hotelRoomData && this.state.hotelRoomData.length>0){
             roomData=this.state.hotelRoomData.map((data,i)=>
-            <Col xs="4" key={i}>
+            <Col xs="4" key={i} >
                 <Link to={`/innerPage/${data.id}`}>
                     <div className="roomsCover">
                         <h4>{data.name}</h4>

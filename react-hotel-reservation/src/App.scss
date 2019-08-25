@@ -26,12 +26,18 @@ $lightPurple: #959CC4;
     
 }
 
-.nav-link{
-    color: $deepBlue;
-    font-weight: bolder;
-    margin: 0 10px;
-    img{
-        padding: 0 5px;
+.nav-item{
+    a{
+        color: $deepBlue;
+        font-weight: bolder;
+        margin: 0 10px;
+        img{
+            padding: 0 5px;
+        }
+        &:hover{
+            color: $lightPurple;
+            text-decoration: none;
+        }
     }
 }
 
