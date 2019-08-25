@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import InnerPageHeader from './innerPageHeader'
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import 'react-day-picker/lib/style.css';
 import { 
     Row,
@@ -61,19 +61,19 @@ export default class reservationDetail extends Component {
                 this.setState({
                     selectedEndDay:undefined ,
                   });
-                  this.computedPricePerRoom(
-                    day.getDay(),
-                    day.getTime(),
-                    undefined,
-                    undefined
-                  )
+                //   this.computedPricePerRoom(
+                //     day.getDay(),
+                //     day.getTime(),
+                //     undefined,
+                //     undefined
+                //   )
             }else{
-                this.computedPricePerRoom(
-                    day.getDay(),
-                    day.getTime(),
-                    this.state.selectedEndDay.getDay(),
-                    this.state.selectedEndDay.getTime()
-                  )
+                // this.computedPricePerRoom(
+                //     day.getDay(),
+                //     day.getTime(),
+                //     this.state.selectedEndDay.getDay(),
+                //     this.state.selectedEndDay.getTime()
+                //   )
             }
             
         }
@@ -195,11 +195,13 @@ export default class reservationDetail extends Component {
             }),
             body: JSON.stringify(submitData)
         }).then(response =>{
+                // withRouter.history.push('/finishedReservation')
+                // console.log(response.json());
                 return response.json(); 
             }).then((jsonData) => {
-                // console.log(jsonData);
+                console.log(jsonData);
             }).catch((error)=>{
-                console.log(error)
+                alert(error)
             })
     } 
 
@@ -283,7 +285,7 @@ export default class reservationDetail extends Component {
                                         </FormGroup>
                                     </Col>
                                     <Col md={4}>
-                                        歡迎您的蒞臨，誠摯為您服務{(this.state.selectedEndDay.getTime()-this.state.selectedStartDay.getTime()) / (24*60*60*1000)}晚
+                                        歡迎您的蒞臨，誠摯為您服務{selectedEndDay&&selectedStartDay?(selectedEndDay.getTime()-selectedStartDay.getTime()) / (24*60*60*1000):0}晚
                                     </Col>
                                 </Row>
                                 <Row form>

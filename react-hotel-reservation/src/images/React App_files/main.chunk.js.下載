@@ -1,0 +1,3084 @@
+(window["webpackJsonpreact-hotel-reservation"] = window["webpackJsonpreact-hotel-reservation"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/App.scss":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--6-oneOf-5-3!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./src/App.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+var urlEscape = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/url-escape.js */ "./node_modules/css-loader/dist/runtime/url-escape.js");
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ./images/backgroundImage.jpg */ "./src/images/backgroundImage.jpg"));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(/*! ./images/logo.png */ "./src/images/logo.png"));
+
+// Module
+exports.push([module.i, ".h4, h4 {\n  font-size: 18px !important;\n  font-weight: bolder;\n  text-transform: uppercase; }\n\n.App .home {\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 70% 50%;\n  font-family: Microsoft JhengHei;\n  height: calc(100vh - 60px); }\n\n.App .topArea .navbar {\n  justify-content: center; }\n\n.nav-item a {\n  color: #2D3047;\n  font-weight: bolder;\n  margin: 0 10px; }\n  .nav-item a img {\n    padding: 0 5px; }\n  .nav-item a:hover {\n    color: #959CC4;\n    text-decoration: none; }\n\nspan.hotTag {\n  background-color: red;\n  border-radius: 50px;\n  color: white;\n  font-size: 12px;\n  font-weight: bolder;\n  margin-right: 10px;\n  padding: 3px 7px 5px; }\n\na.linkButton {\n  color: white; }\n  a.linkButton button {\n    background-color: #419D78 !important;\n    border: none;\n    border-radius: 0px;\n    padding: 1px 14px 4px; }\n    a.linkButton button:hover {\n      text-decoration: none; }\n\n.priceRow {\n  color: #2D3047;\n  font-size: 32px;\n  justify-content: flex-end;\n  margin-bottom: 40px;\n  position: relative; }\n  .priceRow span {\n    background-color: #959CC4;\n    display: block;\n    height: 5px;\n    position: absolute;\n    bottom: 4px;\n    width: 280px;\n    z-index: -1; }\n\n.innerPage, .reservationDetail {\n  min-height: calc(100vh - 60px); }\n  .innerPage .header, .reservationDetail .header {\n    background-color: #2D3047; }\n    .innerPage .header .navbar, .reservationDetail .header .navbar {\n      justify-content: space-between;\n      max-width: 1200px;\n      margin: 0 auto; }\n      .innerPage .header .navbar .nav-link, .reservationDetail .header .navbar .nav-link {\n        color: rgba(255, 255, 255, 0.5); }\n        .innerPage .header .navbar .nav-link:hover, .reservationDetail .header .navbar .nav-link:hover {\n          color: white; }\n    .innerPage .header .logoImage, .reservationDetail .header .logoImage {\n      background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n      background-position: -215px -83px;\n      border-radius: 10px;\n      height: 47px;\n      width: 166px;\n      background-size: 600px; }\n\n.innerPage .content > .row {\n  margin: 30px 0; }\n\n.innerPage .content .firstRow .col:nth-child(1) > .row > .col {\n  display: flex;\n  align-items: center; }\n\n.innerPage .content .firstRow .col:nth-child(2) {\n  padding-right: 0;\n  text-align: right; }\n\n.innerPage .content .firstRow.row {\n  margin: 40px 0 20px; }\n\n.innerPage .content .roomsRow {\n  flex-wrap: nowrap !important;\n  margin: 30px 0; }\n  .innerPage .content .roomsRow .col-7 {\n    height: 515px;\n    overflow: hidden; }\n  .innerPage .content .roomsRow .col-5 .row {\n    height: 250px;\n    overflow: hidden; }\n    .innerPage .content .roomsRow .col-5 .row:nth-child(1) {\n      margin-bottom: 15px; }\n\n.innerPage .content .selectRow, .innerPage .content .datepickerRow {\n  text-align: right; }\n  .innerPage .content .selectRow .row, .innerPage .content .datepickerRow .row {\n    align-items: center; }\n  .innerPage .content .selectRow .col-5, .innerPage .content .selectRow .col-7, .innerPage .content .datepickerRow .col-5, .innerPage .content .datepickerRow .col-7 {\n    padding: 0;\n    padding-right: 5px; }\n\n.innerPage .content .detailRow {\n  border-left: 2px solid #2D3047;\n  padding-left: 5px; }\n  .innerPage .content .detailRow div {\n    margin: 5px 0; }\n\n.innerPage .content .describeRow .row {\n  margin-bottom: 30px; }\n\n.innerPage .content .describeRow .checkInProgress {\n  font-size: 12px; }\n  .innerPage .content .describeRow .checkInProgress .checkInear, .innerPage .content .describeRow .checkInProgress .checkInlate {\n    bottom: 25px;\n    border: 1px solid black;\n    position: absolute; }\n    .innerPage .content .describeRow .checkInProgress .checkInear:after, .innerPage .content .describeRow .checkInProgress .checkInlate:after {\n      content: \"\";\n      border-top: 5px solid black;\n      border-left: 5px solid transparent;\n      border-right: 5px solid transparent;\n      left: 10px;\n      position: absolute;\n      top: 18px; }\n  .innerPage .content .describeRow .checkInProgress .checkInlate {\n    left: 60px; }\n  .innerPage .content .describeRow .checkInProgress .progress-bar:nth-child(1), .innerPage .content .describeRow .checkInProgress .progress-bar:nth-child(3) {\n    background-color: #DCDCDC; }\n  .innerPage .content .describeRow .checkInProgress .progress-bar:nth-child(2) {\n    background-color: #419D78; }\n\n.innerPage .content .describeRow .checkOutProgress {\n  font-size: 12px; }\n  .innerPage .content .describeRow .checkOutProgress #checkOut {\n    bottom: 25px;\n    border: 1px solid black;\n    position: absolute; }\n    .innerPage .content .describeRow .checkOutProgress #checkOut:after {\n      content: \"\";\n      border-top: 5px solid black;\n      border-left: 5px solid transparent;\n      border-right: 5px solid transparent;\n      left: 10px;\n      position: absolute;\n      top: 18px; }\n  .innerPage .content .describeRow .checkOutProgress .progress-bar:nth-child(1) {\n    background-color: #959CC4; }\n  .innerPage .content .describeRow .checkOutProgress .progress-bar:nth-child(2) {\n    background-color: #DCDCDC; }\n\n.innerPage .content .describeRow .card {\n  background-color: #2D3047;\n  color: white;\n  font-size: 12px; }\n\n.reservationDetail .content_title {\n  margin: 20px 0; }\n\n.reservationDetail .content .firstRow {\n  border: 1px solid #2D3047;\n  max-height: 300px;\n  overflow: hidden; }\n  .reservationDetail .content .firstRow .row {\n    margin: 0 !important; }\n  .reservationDetail .content .firstRow > .col-7, .reservationDetail .content .firstRow .col-5 {\n    padding: 0;\n    margin: 0; }\n  .reservationDetail .content .firstRow > .col-5 {\n    border-right: 1px solid #2D3047; }\n  .reservationDetail .content .firstRow_title {\n    background-color: #2D3047;\n    color: white;\n    padding: 10px 5px 10px 10px; }\n    .reservationDetail .content .firstRow_title .col-3 {\n      text-align: right; }\n  .reservationDetail .content .firstRow_detail > .col > .row {\n    margin: 15px 5px !important; }\n  .reservationDetail .content .firstRow_detail .noBreakfast {\n    color: red;\n    font-weight: bold; }\n  .reservationDetail .content .firstRow_detail_price {\n    position: relative; }\n    .reservationDetail .content .firstRow_detail_price .priceRow {\n      bottom: 0px;\n      right: 5px;\n      position: absolute; }\n\n.reservationDetail .content form {\n  border: 1px solid #2D3047;\n  margin: 100px 0;\n  padding: 20px 30px 20px 80px;\n  position: relative; }\n  .reservationDetail .content form .datePickerRow {\n    align-items: center; }\n    .reservationDetail .content form .datePickerRow .col-md-4:last-child {\n      color: #419D78; }\n  .reservationDetail .content form .reservationTag {\n    background-color: #2D3047;\n    border-top-right-radius: 5px;\n    border-top-left-radius: 5px;\n    color: white;\n    left: 0;\n    padding: 10px 20px;\n    position: absolute;\n    top: -45px; }\n  .reservationDetail .content form .extraService {\n    border-bottom: 3px solid #419D78;\n    color: #419D78;\n    margin: 10px -10px;\n    padding-bottom: 5px; }\n  .reservationDetail .content form .radioGroup {\n    color: #419D78; }\n    .reservationDetail .content form .radioGroup .form-check {\n      display: flex;\n      flex-direction: column;\n      margin: 5px 0; }\n  .reservationDetail .content form .linkButton {\n    bottom: 20px;\n    text-align: right;\n    position: absolute;\n    right: 30px; }\n\n.topArea .content {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 0px 100px; }\n  .topArea .content img {\n    width: 100%;\n    vertical-align: middle; }\n  .topArea .content .logoImage {\n    background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n    background-position: -534px -203px;\n    border-radius: 10px;\n    height: 98px;\n    margin: 50px auto;\n    width: 351px; }\n  .topArea .content .roomsTitle {\n    background-color: #2D3047;\n    color: white;\n    justify-content: center;\n    margin: 0px auto;\n    padding: 5px 0; }\n  .topArea .content .rooms .col-4 {\n    height: 120px;\n    margin: 10px 0;\n    min-width: 200px;\n    overflow: hidden; }\n    .topArea .content .rooms .col-4 a:hover {\n      text-decoration: none; }\n    .topArea .content .rooms .col-4 img {\n      box-shadow: 1px 1px 7px 0px #737577; }\n    .topArea .content .rooms .col-4:hover .roomsCover {\n      align-items: center;\n      display: flex;\n      flex-direction: column;\n      justify-content: center; }\n    .topArea .content .rooms .col-4:hover img {\n      display: none; }\n    .topArea .content .rooms .col-4 .roomsCover {\n      background-color: #28614A;\n      cursor: pointer;\n      display: none;\n      font-family: monospace;\n      height: 100%; }\n      .topArea .content .rooms .col-4 .roomsCover h4 {\n        color: white; }\n      .topArea .content .rooms .col-4 .roomsCover p {\n        color: #419D78; }\n      .topArea .content .rooms .col-4 .roomsCover span {\n        background-color: white;\n        border-radius: 10px;\n        color: #2D3047;\n        padding: 0 10px; }\n    .topArea .content .rooms .col-4:not(:nth-child(2)):not(:nth-child(5)) img {\n      transform: translate(0, -52%); }\n    .topArea .content .rooms .col-4:not(:nth-child(2)):not(:nth-child(5)) .roomsCover {\n      transform: translate(0, 0); }\n\n.footer {\n  align-items: center;\n  color: rgba(255, 255, 255, 0.5);\n  background-color: #2D3047;\n  display: flex;\n  font-size: 12px;\n  height: 60px;\n  text-align: center; }\n  .footer .container-fluid {\n    margin: 0 15px 0 75px; }\n    .footer .container-fluid .row {\n      align-items: center; }\n    .footer .container-fluid .langRow {\n      margin: 0 60px; }\n      .footer .container-fluid .langRow .col {\n        cursor: pointer; }\n        .footer .container-fluid .langRow .col:not(:last-child) {\n          border-right: 2px solid rgba(255, 255, 255, 0.5); }\n        .footer .container-fluid .langRow .col:hover {\n          color: white; }\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home */ "./src/components/home.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer */ "./src/components/footer.js");
+/* harmony import */ var _components_innerPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/innerPage */ "./src/components/innerPage.js");
+/* harmony import */ var _components_reservationDetail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/reservationDetail */ "./src/components/reservationDetail.js");
+/* harmony import */ var _components_finishedReservation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/finishedReservation */ "./src/components/finishedReservation.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\App.js";
+
+
+
+
+
+
+ // import { Button } from 'reactstrap';
+
+function App() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "App",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    component: _components_home__WEBPACK_IMPORTED_MODULE_2__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/innerPage/:id",
+    component: _components_innerPage__WEBPACK_IMPORTED_MODULE_4__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/reservationDetail",
+    component: _components_reservationDetail__WEBPACK_IMPORTED_MODULE_5__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/finishedReservation",
+    component: _components_finishedReservation__WEBPACK_IMPORTED_MODULE_6__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  })) // <div>
+  //     <div className="App">
+  //     <Home></Home>
+  //     </div>
+  //     <Footer></Footer> 
+  // </div>
+  ;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/App.scss":
+/*!**********************!*\
+  !*** ./src/App.scss ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../node_modules/postcss-loader/src??postcss!../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./App.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/App.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../node_modules/postcss-loader/src??postcss!../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./App.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/App.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../node_modules/postcss-loader/src??postcss!../node_modules/resolve-url-loader??ref--6-oneOf-5-3!../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-4!./App.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/App.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/components/finishedReservation.js":
+/*!***********************************************!*\
+  !*** ./src/components/finishedReservation.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return InnerPage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _innerPageHeader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./innerPageHeader */ "./src/components/innerPageHeader.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\finishedReservation.js";
+
+
+class InnerPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "innerPage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "topArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_innerPageHeader__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "Finished")));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/footer.js":
+/*!**********************************!*\
+  !*** ./src/components/footer.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\footer.js";
+
+
+class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+      fluid: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "6",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "Tel: 071234567"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "Fax: 071234567")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, "Email: lucky@gamil.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, "Add: \u53F0\u4E2D\u5E02\u897F\u5C6F\u5340")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "6",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      className: "langRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, "\u7E41\u9AD4\u4E2D\u6587"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "\u7B80\u4F53\u4E2D\u6587"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, "\u65E5\u672C\u8A9E"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, "English"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, "\uD55C\uAD6D\uC5B4"))))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/home.js":
+/*!********************************!*\
+  !*** ./src/components/home.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _homeHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./homeHeader */ "./src/components/homeHeader.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\home.js";
+
+
+
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    this.componentDidMount = () => {
+      fetch('https://challenge.thef2e.com/api/thef2e2019/stage6/rooms', {
+        headers: new Headers({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC'
+        })
+      }).then(response => {
+        response.json().then(res => {
+          this.setState({
+            hotelRoomData: res.items
+          });
+        });
+      });
+    };
+
+    this.state = {
+      hotelRoomData: null
+    };
+  }
+
+  render() {
+    let roomData = "";
+
+    if (this.state.hotelRoomData && this.state.hotelRoomData.length > 0) {
+      roomData = this.state.hotelRoomData.map((data, i) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        xs: "4",
+        key: i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/innerPage/".concat(data.id),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "roomsCover",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, data.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, "$", data.normalDayPrice, " ~ $", data.holidayPrice), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, "more \u2192")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        key: i,
+        src: data.imageUrl,
+        alt: "Card cap",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }))));
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "home",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "topArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homeHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+      fluid: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "logoImage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      className: "roomsTitle",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }, "\u5BA2\u623F\u4ECB\u7D39")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      className: "rooms",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, roomData ? roomData : '')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      xs: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }))))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/homeHeader.js":
+/*!**************************************!*\
+  !*** ./src/components/homeHeader.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HomeHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../App.scss */ "./src/App.scss");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _images_person_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../images/person.svg */ "./src/images/person.svg");
+/* harmony import */ var _images_person_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_person_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../images/bedroom.svg */ "./src/images/bedroom.svg");
+/* harmony import */ var _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_bedroom_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_room_service_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../images/room_service.svg */ "./src/images/room_service.svg");
+/* harmony import */ var _images_room_service_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_room_service_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_map_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../images/map.svg */ "./src/images/map.svg");
+/* harmony import */ var _images_map_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_map_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_new_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../images/new.svg */ "./src/images/new.svg");
+/* harmony import */ var _images_new_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_images_new_svg__WEBPACK_IMPORTED_MODULE_7__);
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\homeHeader.js";
+
+
+
+
+
+
+
+
+class HomeHeader extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "header",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_person_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      alt: "about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), "\u95DC\u65BC\u6211\u5011")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: "room_introduction",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }), "\u5BA2\u623F\u4ECB\u7D39")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_room_service_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+      alt: "room_service",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }), "\u4F4F\u5BBF\u670D\u52D9")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_map_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+      alt: "traffic",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }), "\u4EA4\u901A\u6307\u5F15")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_new_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+      alt: "news",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }), "\u6700\u65B0\u6D88\u606F")))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/innerPage.js":
+/*!*************************************!*\
+  !*** ./src/components/innerPage.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return InnerPage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_day_picker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-day-picker */ "./node_modules/react-day-picker/DayPicker.js");
+/* harmony import */ var react_day_picker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_day_picker__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _innerPageHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./innerPageHeader */ "./src/components/innerPageHeader.js");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-day-picker/lib/style.css */ "./node_modules/react-day-picker/lib/style.css");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\innerPage.js";
+
+
+
+
+
+
+class InnerPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    this.componentDidMount = () => {
+      const match = this.props.match;
+      fetch("https://challenge.thef2e.com/api/thef2e2019/stage6/room/".concat(match.params.id), {
+        headers: new Headers({
+          'Accept': 'application/json',
+          'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC'
+        })
+      }).then(response => {
+        response.json().then(res => {
+          this.setState({
+            hotelRoomData: res.room[0],
+            checkInEarly: res.room[0].checkInAndOut.checkInEarly.split(':')[0],
+            checkInLate: res.room[0].checkInAndOut.checkInLate.split(':')[0],
+            checkOut: res.room[0].checkInAndOut.checkOut.split(':')[0]
+          });
+        });
+      });
+    };
+
+    this.handleStartDayClick = this.handleStartDayClick.bind(this);
+    this.handleEndDayClick = this.handleEndDayClick.bind(this);
+    this.computedPricePerRoom = this.computedPricePerRoom.bind(this);
+    this.selectRoomNum = this.selectRoomNum.bind(this);
+    this.selectAdult = this.selectAdult.bind(this);
+    this.selectChild = this.selectChild.bind(this);
+    this.state = {
+      selectedStartDay: null,
+      selectedEndDay: null,
+      checkInEarly: null,
+      checkInLate: null,
+      checkOut: null,
+      holiday: null,
+      normalDay: null,
+      roomNum: 0,
+      adultNum: 0,
+      childNum: 0
+    };
+  }
+
+  handleStartDayClick(day, {
+    selected
+  }) {
+    this.setState({
+      selectedStartDay: selected ? undefined : day,
+      endDayFirstDate: selected ? undefined : day.getTime() + 24 * 60 * 60 * 1000
+    });
+
+    if (this.state.selectedEndDay) {
+      if (this.state.selectedEndDay.getTime() <= day.getTime() + 24 * 60 * 60 * 1000) {
+        this.setState({
+          selectedEndDay: undefined
+        });
+        this.computedPricePerRoom(day.getDay(), day.getTime(), undefined, undefined);
+      } else {
+        this.computedPricePerRoom(day.getDay(), day.getTime(), this.state.selectedEndDay.getDay(), this.state.selectedEndDay.getTime());
+      }
+    }
+  }
+
+  handleEndDayClick(day, {
+    selected
+  }) {
+    if (!this.state.selectedStartDay) {
+      alert('請先選擇入住日期');
+      return;
+    }
+
+    this.setState({
+      selectedEndDay: selected ? undefined : day
+    });
+    this.computedPricePerRoom(this.state.selectedStartDay.getDay(), this.state.selectedStartDay.getTime(), day.getDay(), day.getTime());
+  }
+
+  computedPricePerRoom(startWeek, startDate, endWeek, endDate) {
+    let day = (endDate - startDate) / (24 * 60 * 60 * 1000);
+
+    if (endDate) {
+      let week = parseInt(day / 7);
+      let res = day - week * 7;
+
+      if (res === 0) {
+        this.setState({
+          holiday: 3 * week,
+          normalDay: 4 * week
+        });
+      } else {
+        if (startWeek === 5) {
+          if (res <= 3) {
+            this.setState({
+              holiday: 3 * week + res,
+              normalDay: day - (3 * week + res)
+            });
+          } else {
+            this.setState({
+              holiday: 3 * week + 7 - startWeek + 1,
+              normalDay: day - (3 * week + 7 - startWeek + 1)
+            });
+          }
+        } else if (startWeek === 6) {
+          if (res <= 2) {
+            this.setState({
+              holiday: 3 * week + res,
+              normalDay: day - (3 * week + res)
+            });
+          } else {
+            this.setState({
+              holiday: 3 * week + 2,
+              normalDay: day - (3 * week + 2)
+            });
+          }
+        } else if (startWeek === 0) {
+          if (res <= 5) {
+            this.setState({
+              holiday: 3 * week + 1,
+              normalDay: day - (3 * week + 1)
+            });
+          } else {
+            this.setState({
+              holiday: 3 * week + 2,
+              normalDay: day - (3 * week + 2)
+            });
+          }
+        } else {
+          if (res <= 4) {
+            this.setState({
+              holiday: day - (4 * week + res),
+              normalDay: 4 * week + res
+            });
+          } else {
+            this.setState({
+              holiday: 3 * week + res - 4,
+              normalDay: day - (3 * week + res - 4)
+            });
+          }
+        }
+      }
+    } else {
+      this.setState({
+        holiday: 0,
+        normalDay: 0
+      });
+    }
+  }
+
+  selectRoomNum(e) {
+    this.setState({
+      roomNum: e.target.value.substring(0, 1)
+    });
+  }
+
+  selectAdult(e) {
+    if (Number(e.target.value.substring(0, 1)) + Number(this.state.childNum) > this.state.roomNum * this.state.hotelRoomData.descriptionShort.GuestMax) {
+      if (this.state.roomNum) {
+        alert("\u7E3D\u4EBA\u6578\u4E0D\u5F97\u8D85\u904E".concat(this.state.roomNum * this.state.hotelRoomData.descriptionShort.GuestMax));
+      } else {
+        alert('請先選擇房間數');
+      }
+
+      this.setState({
+        adultNum: 0
+      });
+      return;
+    }
+
+    this.setState({
+      adultNum: e.target.value.substring(0, 1)
+    });
+  }
+
+  selectChild(e) {
+    if (Number(e.target.value.substring(0, 1)) + Number(this.state.adultNum) > this.state.roomNum * this.state.hotelRoomData.descriptionShort.GuestMax) {
+      if (this.state.roomNum) {
+        alert("\u7E3D\u4EBA\u6578\u4E0D\u5F97\u8D85\u904E".concat(this.state.roomNum * this.state.hotelRoomData.descriptionShort.GuestMax));
+      } else {
+        alert('請先選擇房間數');
+      }
+
+      this.setState({
+        childNum: 0
+      });
+      return;
+    }
+
+    this.setState({
+      childNum: e.target.value.substring(0, 1)
+    });
+  }
+
+  render() {
+    let disabledEndDays = this.state.endDayFirstDate ? new Date(this.state.endDayFirstDate) : new Date();
+    let pathData = {
+      pathname: '/reservationDetail',
+      state: {
+        id: this.state.hotelRoomData ? this.state.hotelRoomData.id : '',
+        roomName: this.state.hotelRoomData ? this.state.hotelRoomData.name : '',
+        roomImg: this.state.hotelRoomData ? this.state.hotelRoomData.imageUrl[1] : '',
+        description: this.state.hotelRoomData ? this.state.hotelRoomData.description : '',
+        startDay: this.state.selectedStartDay,
+        endDay: this.state.selectedEndDay,
+        totalPeople: Number(this.state.adultNum) + Number(this.state.childNum),
+        totalPrice: this.state.hotelRoomData ? this.state.roomNum * (this.state.holiday * this.state.hotelRoomData.holidayPrice + this.state.normalDay * this.state.hotelRoomData.normalDayPrice) : ''
+      }
+    };
+    let linkBtnDisable = this.state.adultNum > 0 && this.state.childNum >= 0 && this.state.selectedStartDay && this.state.selectedEndDay && this.state.roomNum > 0 ? false : true; // let linkBtnDisable=false
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "innerPage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 231
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "topArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 232
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_innerPageHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 233
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 234
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 236
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 237
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 238
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 239
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "hotTag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 240
+      },
+      __self: this
+    }, "HOT"), "\u623F\u578B\u540D\u7A31:", this.state.hotelRoomData ? this.state.hotelRoomData.name : ''))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 245
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+      className: "linkButton",
+      to: pathData,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      disabled: linkBtnDisable,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 247
+      },
+      __self: this
+    }, "\u9810\u8A02")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "roomsRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 251
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 252
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: this.state.hotelRoomData ? this.state.hotelRoomData.imageUrl[0] : '',
+      alt: "Card cap",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 253
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 256
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: this.state.hotelRoomData ? this.state.hotelRoomData.imageUrl[1] : '',
+      alt: "Card cap",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 257
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 259
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: this.state.hotelRoomData ? this.state.hotelRoomData.imageUrl[2] : '',
+      alt: "Card cap",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: this
+    })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 266
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 267
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "datepickerRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 268
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 269
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 270
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: this
+    }, "\u5165\u4F4F\u6642\u9593")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 272
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "text",
+      readOnly: true,
+      value: this.state.selectedStartDay ? this.state.selectedStartDay.toLocaleDateString() : 'Please select a day',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 272
+      },
+      __self: this
+    })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 277
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 278
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 279
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 279
+      },
+      __self: this
+    }, "\u9000\u623F\u6642\u9593")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 280
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "text",
+      readOnly: true,
+      value: this.state.selectedEndDay ? this.state.selectedEndDay.toLocaleDateString() : 'Please select a day',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 280
+      },
+      __self: this
+    })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 287
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "selectRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 288
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 289
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 290
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: this
+    }, "\u5BA2\u623F")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 292
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "select",
+      name: "select",
+      onChange: this.selectRoomNum,
+      value: this.state.roomNum,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 293
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "0",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 294
+      },
+      __self: this
+    }, "0\u9593"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 295
+      },
+      __self: this
+    }, "1\u9593"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 296
+      },
+      __self: this
+    }, "2\u9593"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 301
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 303
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 303
+      },
+      __self: this
+    }, "\u6210\u4EBA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 304
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "select",
+      name: "select",
+      value: this.state.adultNum,
+      onChange: this.selectAdult,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 305
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "0",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 306
+      },
+      __self: this
+    }, "0\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 307
+      },
+      __self: this
+    }, "1\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 308
+      },
+      __self: this
+    }, "2\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 309
+      },
+      __self: this
+    }, "3\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 310
+      },
+      __self: this
+    }, "4\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 311
+      },
+      __self: this
+    }, "5\u4EBA"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 316
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 317
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 318
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 318
+      },
+      __self: this
+    }, "\u5C0F\u5B69")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 319
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      disabled: this.state.hotelRoomData && !this.state.hotelRoomData.amenities['Child-Friendly'],
+      type: "select",
+      name: "select",
+      value: this.state.childNum,
+      onChange: this.selectChild,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 320
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "0",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 321
+      },
+      __self: this
+    }, "0\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 322
+      },
+      __self: this
+    }, "1\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 323
+      },
+      __self: this
+    }, "2\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 324
+      },
+      __self: this
+    }, "3\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 325
+      },
+      __self: this
+    }, "4\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 326
+      },
+      __self: this
+    }, "5\u4EBA")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 336
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 337
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 338
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 339
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      selectedDays: this.state.selectedStartDay,
+      onDayClick: this.handleStartDayClick,
+      disabledDays: [{
+        before: new Date()
+      }],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 340
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 349
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      selectedDays: this.state.selectedEndDay,
+      onDayClick: this.handleEndDayClick,
+      disabledDays: [{
+        before: disabledEndDays
+      }],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 350
+      },
+      __self: this
+    })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 362
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "priceRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 363
+      },
+      __self: this
+    }, "\u7E3D\u50F9  NT ", this.state.hotelRoomData ? this.state.roomNum * (this.state.holiday * this.state.hotelRoomData.holidayPrice + this.state.normalDay * this.state.hotelRoomData.normalDayPrice) : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 364
+      },
+      __self: this
+    }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "detailRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 365
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 366
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 367
+      },
+      __self: this
+    }, "- wifi: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Wi-Fi'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 370
+      },
+      __self: this
+    }, "- \u65E9\u9910: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Breakfast'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 373
+      },
+      __self: this
+    }, "- \u96FB\u8996: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Television'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 376
+      },
+      __self: this
+    }, "- \u7A7A\u8ABF: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Air-Conditioner'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 379
+      },
+      __self: this
+    }, "- \u51B0\u7BB1: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Refrigerator'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 382
+      },
+      __self: this
+    }, "- \u6C99\u767C: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Sofa'] ? '有' : '無' : '')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 386
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 387
+      },
+      __self: this
+    }, "- \u6F02\u4EAE\u7684\u8996\u91CE: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Great-View'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 390
+      },
+      __self: this
+    }, "- \u7981\u6B62\u5438\u83F8: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Smoke-Free'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 393
+      },
+      __self: this
+    }, "- \u9069\u5408\u5152\u7AE5: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Child-Friendly'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 396
+      },
+      __self: this
+    }, "- \u5BF5\u7269\u651C\u5E36: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Pet-Friendly'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 399
+      },
+      __self: this
+    }, "- Mini Bar: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Mini-Bar'] ? '有' : '無' : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 402
+      },
+      __self: this
+    }, "- Room Service: ", this.state.hotelRoomData ? this.state.hotelRoomData.amenities['Room-Service'] ? '有' : '無' : ''))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "describeRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 410
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "9",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 411
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 412
+      },
+      __self: this
+    }, this.state.hotelRoomData ? this.state.hotelRoomData.description : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "checkInProgress",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 415
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 416
+      },
+      __self: this
+    }, "checkIn\u6642\u9593"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "9",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 419
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkInear",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 420
+      },
+      __self: this
+    }, this.state.hotelRoomData ? this.state.hotelRoomData.checkInAndOut.checkInEarly : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      multi: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 421
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      bar: true,
+      value: this.state.checkInEarly / 24 * 100,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 422
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      bar: true,
+      value: (this.state.checkInLate - this.state.checkInEarly) / 24 * 100,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 423
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      bar: true,
+      value: (24 - this.state.checkInLate) / 24 * 100,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 424
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "checkInlate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 426
+      },
+      __self: this
+    }, this.state.hotelRoomData ? this.state.hotelRoomData.checkInAndOut.checkInLate : ''))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "checkOutProgress",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 429
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 430
+      },
+      __self: this
+    }, "checkOut\u6642\u9593"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "9",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 433
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      id: "checkOut",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 434
+      },
+      __self: this
+    }, this.state.hotelRoomData ? this.state.hotelRoomData.checkInAndOut.checkOut : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      multi: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 435
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      bar: true,
+      value: this.state.checkOut / 24 * 100,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 436
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Progress"], {
+      bar: true,
+      value: (24 - this.state.checkOut) / 24 * 100,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 437
+      },
+      __self: this
+    }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 442
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Card"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 443
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardBody"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 444
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 445
+      },
+      __self: this
+    }, "\u5E8A\u578B : ", this.state.hotelRoomData ? this.state.hotelRoomData.descriptionShort.Bed[0] : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 448
+      },
+      __self: this
+    }, "\u623F\u5BA2\u4EBA\u6578\u9650\u5236 : ", this.state.hotelRoomData ? this.state.hotelRoomData.descriptionShort.GuestMin : '', " ~ ", this.state.hotelRoomData ? this.state.hotelRoomData.descriptionShort.GuestMax : '', " \u4EBA "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 449
+      },
+      __self: this
+    }, "\u885B\u6D74\u6578\u91CF : ", this.state.hotelRoomData ? this.state.hotelRoomData.descriptionShort['Private-Bath'] : '', " \u9593"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 450
+      },
+      __self: this
+    }, "\u623F\u9593\u5927\u5C0F : ", this.state.hotelRoomData ? this.state.hotelRoomData.descriptionShort.Footage : '', " \u5E73\u65B9\u516C\u5C3A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 451
+      },
+      __self: this
+    }, "\u5047\u65E5(\u4E94-\u65E5)\u50F9\u683C : ", this.state.hotelRoomData ? this.state.hotelRoomData.holidayPrice : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardText"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 452
+      },
+      __self: this
+    }, "\u5E73\u65E5(\u4E00-\u56DB)\u50F9\u683C : ", this.state.hotelRoomData ? this.state.hotelRoomData.normalDayPrice : ''))))))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/innerPageHeader.js":
+/*!*******************************************!*\
+  !*** ./src/components/innerPageHeader.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HomeHeader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../App.scss */ "./src/App.scss");
+/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _images_person_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../images/person.svg */ "./src/images/person.svg");
+/* harmony import */ var _images_person_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_person_svg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../images/bedroom.svg */ "./src/images/bedroom.svg");
+/* harmony import */ var _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_bedroom_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_room_service_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../images/room_service.svg */ "./src/images/room_service.svg");
+/* harmony import */ var _images_room_service_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_room_service_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_map_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../images/map.svg */ "./src/images/map.svg");
+/* harmony import */ var _images_map_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_images_map_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _images_new_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../images/new.svg */ "./src/images/new.svg");
+/* harmony import */ var _images_new_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_images_new_svg__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\innerPageHeader.js";
+
+
+
+
+
+
+
+
+
+class HomeHeader extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "header",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Navbar"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavbarBrand"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "logoImage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_person_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: "about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }), "\u95DC\u65BC\u6211\u5011")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_bedroom_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+      alt: "room_introduction",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }), "\u5BA2\u623F\u4ECB\u7D39")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_room_service_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+      alt: "room_service",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }), "\u4F4F\u5BBF\u670D\u52D9")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_map_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+      alt: "traffic",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }), "\u4EA4\u901A\u6307\u5F15")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavItem"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+      href: "#",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_new_svg__WEBPACK_IMPORTED_MODULE_8___default.a,
+      alt: "news",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }), "\u6700\u65B0\u6D88\u606F")))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/reservationDetail.js":
+/*!*********************************************!*\
+  !*** ./src/components/reservationDetail.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return reservationDetail; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-day-picker/DayPickerInput */ "./node_modules/react-day-picker/DayPickerInput.js");
+/* harmony import */ var react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _innerPageHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./innerPageHeader */ "./src/components/innerPageHeader.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-day-picker/lib/style.css */ "./node_modules/react-day-picker/lib/style.css");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\reservationDetail.js";
+
+
+
+
+
+
+class reservationDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.handleStartDayChange = this.handleStartDayChange.bind(this);
+    this.handleEndDayChange = this.handleEndDayChange.bind(this);
+    this.submitReservation = this.submitReservation.bind(this); // this.validEmail=this.validEmail.bind(this);
+
+    this.state = {
+      roomDetail: this.props.location.state,
+      formSex: 'W',
+      formFirstname: '',
+      formLastname: '',
+      formTel: '',
+      formEmail: '',
+      formCheckEmail: '',
+      formExtraService: '',
+      endDayFirstDate: '',
+      fisrtNameValid: false,
+      fisrtNameinValid: false,
+      lastNameValid: false,
+      lastNameinValid: false,
+      telValid: false,
+      telinValid: false,
+      emailinValid: false,
+      emailValid: false,
+      checkEmailinValid: false,
+      checkEmailValid: false,
+      selectedStartDay: this.props.location.state.startDay,
+      selectedEndDay: this.props.location.state.endDay,
+      endDayFirstDate: this.props.location.state.startDay.getTime() + 24 * 60 * 60 * 1000,
+      isEmpty: true,
+      isDisabled: false
+    };
+  }
+
+  handleStartDayChange(day, {
+    selected
+  }) {
+    this.setState({
+      selectedStartDay: selected ? undefined : day,
+      endDayFirstDate: selected ? undefined : day.getTime() + 24 * 60 * 60 * 1000
+    });
+
+    if (this.state.selectedEndDay) {
+      if (this.state.selectedEndDay.getTime() <= day.getTime() + 24 * 60 * 60 * 1000) {
+        this.setState({
+          selectedEndDay: undefined
+        }); //   this.computedPricePerRoom(
+        //     day.getDay(),
+        //     day.getTime(),
+        //     undefined,
+        //     undefined
+        //   )
+      } else {// this.computedPricePerRoom(
+          //     day.getDay(),
+          //     day.getTime(),
+          //     this.state.selectedEndDay.getDay(),
+          //     this.state.selectedEndDay.getTime()
+          //   )
+        }
+    }
+  }
+
+  handleEndDayChange(day, {
+    selected
+  }) {
+    if (!this.state.selectedStartDay) {
+      alert('請先選擇入住日期');
+      return;
+    }
+
+    this.setState({
+      selectedEndDay: selected ? undefined : day
+    });
+  }
+
+  getFirstName(e) {
+    let valid = /^[a-zA-Z,]{1,}$/; // console.log(valid.test(e.target.value))
+
+    this.setState({
+      formFirstname: e.target.value,
+      fisrtNameValid: valid.test(e.target.value),
+      fisrtNameinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getLastName(e) {
+    let valid = /^[a-zA-Z]{1,}$/; // console.log(valid.test(e.target.value))
+
+    this.setState({
+      formLastname: e.target.value,
+      lastNameValid: valid.test(e.target.value),
+      lastNameinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getSex(e) {
+    this.setState({
+      formSex: e.target.value
+    });
+  }
+
+  getTel(e) {
+    let valid = /^[0][9][\d]{8}$/;
+    this.setState({
+      formTel: e.target.value,
+      telValid: valid.test(e.target.value),
+      telinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getEmail(e) {
+    if (e.target.value) {
+      let valid = /\w@[\w.]{1,}[^./<>_+=]$/;
+      this.setState({
+        formEmail: e.target.value,
+        emailValid: valid.test(e.target.value),
+        emailinValid: !valid.test(e.target.value)
+      });
+    } else {
+      this.setState({
+        formEmail: e.target.value,
+        emailValid: false,
+        emailinValid: false
+      });
+    }
+  }
+
+  getCheckEmail(e) {
+    if (e.target.value) {
+      let valid = e.target.value === this.state.formEmail ? true : false;
+      this.setState({
+        formCheckEmail: e.target.value,
+        checkEmailValid: valid,
+        checkEmailinValid: !valid
+      });
+    } else {
+      this.setState({
+        formCheckEmail: e.target.value,
+        checkEmailValid: false,
+        checkEmailinValid: false
+      });
+    }
+  }
+
+  getExtraServiceSelect(e) {
+    this.setState({
+      formExtraService: e.target.value
+    });
+  }
+
+  submitReservation() {
+    // alert('完善驗證綁定中')
+    function formatTime(time) {
+      let formatTime = time.split('/');
+
+      if (formatTime[1] < 10) {
+        formatTime[1] = "0".concat(formatTime[1]);
+      }
+
+      if (formatTime[2] < 10) {
+        formatTime[2] = "0".concat(formatTime[2]);
+      }
+
+      return formatTime;
+    }
+
+    let _this$state = this.state,
+        formSex = _this$state.formSex,
+        formFirstname = _this$state.formFirstname,
+        formLastname = _this$state.formLastname,
+        formTel = _this$state.formTel,
+        formEmail = _this$state.formEmail,
+        formCheckEmail = _this$state.formCheckEmail,
+        formExtraService = _this$state.formExtraService,
+        selectedStartDay = _this$state.selectedStartDay,
+        selectedEndDay = _this$state.selectedEndDay;
+    selectedStartDay = selectedStartDay ? formatTime(selectedStartDay.toLocaleDateString()).join('-') : "";
+    selectedEndDay = selectedEndDay ? formatTime(selectedEndDay.toLocaleDateString()).join('-') : "";
+    let submitData = {
+      name: formFirstname + formLastname,
+      tel: formTel,
+      date: [selectedStartDay, selectedEndDay] // console.log(submitData)
+
+    };
+    fetch("https://challenge.thef2e.com/api/thef2e2019/stage6/room/".concat(this.state.roomDetail.id), {
+      method: "POST",
+      headers: new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC'
+      }),
+      body: JSON.stringify(submitData)
+    }).then(response => {
+      // withRouter.history.push('/finishedReservation')
+      return response.json();
+    }).then(jsonData => {
+      alert(jsonData);
+    }).catch(error => {
+      alert(error);
+    });
+  }
+
+  render() {
+    const _this$state2 = this.state,
+          selectedStartDay = _this$state2.selectedStartDay,
+          selectedEndDay = _this$state2.selectedEndDay;
+    let disabledEndDays = this.state.endDayFirstDate ? new Date(this.state.endDayFirstDate) : new Date();
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "reservationDetail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 211
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "topArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_innerPageHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 213
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 214
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      className: "content_title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 215
+      },
+      __self: this
+    }, "\uFF0E\u8A02\u55AE\u5167\u5BB9"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 216
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 217
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: this.state.roomDetail.roomImg,
+      alt: "roomImg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 218
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 220
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 221
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "9",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 222
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "hotTag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 223
+      },
+      __self: this
+    }, "HOT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 224
+      },
+      __self: this
+    }, "\u623F\u578B\u540D\u7A31 : ", this.state.roomDetail.roomName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 226
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      className: "linkButton",
+      to: "/innerPage/".concat(this.state.roomDetail.id),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 227
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 228
+      },
+      __self: this
+    }, "\u53D6\u6D88")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_detail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 232
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 233
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 234
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 235
+      },
+      __self: this
+    }, "\u5165\u4F4F\u65E5\u671F : ", this.state.roomDetail.startDay.getFullYear(), " \u5E74 ", this.state.roomDetail.startDay.getMonth() + 1, " \u6708 ", this.state.roomDetail.startDay.getDate(), " \u65E5 ~", this.state.roomDetail.endDay.getFullYear(), " \u5E74 ", this.state.roomDetail.endDay.getMonth() + 1, " \u6708 ", this.state.roomDetail.endDay.getDate(), " \u65E5 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 238
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 239
+      },
+      __self: this
+    }, "\u5165\u4F4F\u4EBA\u6578 : ", this.state.roomDetail.totalPeople)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_detail_price",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 241
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "noBreakfast",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 242
+      },
+      __self: this
+    }, "\u4E0D\u542B\u65E9\u9910"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "priceRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243
+      },
+      __self: this
+    }, "\u7E3D\u50F9 NT", this.state.roomDetail.totalPrice, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: this
+    }, this.state.roomDetail.description))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 254
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "reservationTag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
+      },
+      __self: this
+    }, "\u8A02\u623F\u8CC7\u6599"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      form: true,
+      className: "datePickerRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 256
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 257
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 258
+      },
+      __self: this
+    }, "\u5165\u4F4F\u65E5\u671F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 259
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      value: selectedStartDay,
+      onDayChange: this.handleStartDayChange,
+      dayPickerProps: {
+        disabledDays: {
+          before: new Date()
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 272
+      },
+      __self: this
+    }, "\u9000\u623F\u65E5\u671F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 273
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      value: selectedEndDay,
+      onDayChange: this.handleEndDayChange,
+      dayPickerProps: {
+        selectedDays: selectedEndDay,
+        disabledDays: {
+          before: disabledEndDays
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 274
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 286
+      },
+      __self: this
+    }, "\u6B61\u8FCE\u60A8\u7684\u849E\u81E8\uFF0C\u8AA0\u646F\u70BA\u60A8\u670D\u52D9", selectedEndDay && selectedStartDay ? (selectedEndDay.getTime() - selectedStartDay.getTime()) / (24 * 60 * 60 * 1000) : 0, "\u665A")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      form: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 290
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 292
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 293
+      },
+      __self: this
+    }, "\u59D3\u6C0F(\u82F1\u6587)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.lastNameValid,
+      invalid: this.state.lastNameinValid,
+      value: this.state.formLastname,
+      onChange: e => this.getLastName(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 294
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.lastNameinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 295
+      },
+      __self: this
+    }, "\u5FC5\u9808\u70BA\u82F1\u6587"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 6,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 298
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 299
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 300
+      },
+      __self: this
+    }, "\u59D3\u540D(\u82F1\u6587)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.fisrtNameValid,
+      invalid: this.state.fisrtNameinValid,
+      value: this.state.formFirstname,
+      onChange: e => this.getFirstName(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 301
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.fisrtNameinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: this
+    }, "\u5FC5\u586B\uFF0C\u683C\u5F0F\u70BA\u82F1\u6587"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 305
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 306
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 307
+      },
+      __self: this
+    }, "\u7A31\u8B02"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "select",
+      name: "select",
+      id: "exampleSelect",
+      value: this.state.formSex,
+      onChange: e => this.getSex(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 308
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "W",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 309
+      },
+      __self: this
+    }, "\u5973\u58EB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "M",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 310
+      },
+      __self: this
+    }, "\u7537\u58EB"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 318
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 319
+      },
+      __self: this
+    }, "\u9023\u7D61\u96FB\u8A71"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.telValid,
+      invalid: this.state.telinValid,
+      value: this.state.formTel,
+      onChange: e => this.getTel(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 320
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.telinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 321
+      },
+      __self: this
+    }, "\u624B\u6A5F\u683C\u5F0F\u932F\u8AA4(ex:0912345678)")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 323
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 324
+      },
+      __self: this
+    }, "\u96FB\u5B50\u4FE1\u7BB1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.emailValid,
+      invalid: this.state.emailinValid,
+      value: this.state.formEmail,
+      onChange: e => this.getEmail(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 325
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.emailinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 326
+      },
+      __self: this
+    }, "\u4FE1\u7BB1\u683C\u5F0F\u932F\u8AA4\uFF0C\u5305\u542B\uFF20\u4E0D\u5F97\u5DF2\u7279\u6B8A\u5B57\u5143\u70BA\u6700\u5F8C\u4E00\u5B57\u5143")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 329
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 330
+      },
+      __self: this
+    }, "\u78BA\u8A8D\u4FE1\u7BB1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.checkEmailValid,
+      invalid: this.state.checkEmailinValid,
+      value: this.state.formCheckEmail,
+      onChange: e => this.getCheckEmail(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 331
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.checkEmailinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 332
+      },
+      __self: this
+    }, "\u8207\u4E0A\u5217\u4E0D\u76F8\u7B26")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "extraService",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 334
+      },
+      __self: this
+    }, "\u984D\u5916\u52A0\u50F9\u670D\u52D9"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      className: "radioGroup",
+      tag: "fieldset",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 335
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      check: true,
+      value: this.state.formExtraService,
+      onChange: e => this.getExtraServiceSelect(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 336
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      check: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 337
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "radio",
+      name: "radio1",
+      value: "breakfast",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 338
+      },
+      __self: this
+    }), ' ', "\u65E9\u9910\xA0\xA0\xA0$320/1\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      check: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 341
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "radio",
+      name: "radio1",
+      value: "driveTour",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 342
+      },
+      __self: this
+    }), ' ', "\u79DF\u8ECA\u65C5\u904A\xA0\xA0\xA0$2200/1\u65E5"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      className: "linkButton",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 347
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      disabled: false,
+      onClick: this.submitReservation,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 348
+      },
+      __self: this
+    }, "\u78BA\u8A8D\u8A02\u623F"))))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/images/backgroundImage.jpg":
+/*!****************************************!*\
+  !*** ./src/images/backgroundImage.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/backgroundImage.6312ea36.jpg";
+
+/***/ }),
+
+/***/ "./src/images/bedroom.svg":
+/*!********************************!*\
+  !*** ./src/images/bedroom.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/bedroom.db939d70.svg";
+
+/***/ }),
+
+/***/ "./src/images/logo.png":
+/*!*****************************!*\
+  !*** ./src/images/logo.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/logo.a94319e5.png";
+
+/***/ }),
+
+/***/ "./src/images/map.svg":
+/*!****************************!*\
+  !*** ./src/images/map.svg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/map.fa3bd6d6.svg";
+
+/***/ }),
+
+/***/ "./src/images/new.svg":
+/*!****************************!*\
+  !*** ./src/images/new.svg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/new.7a95ab0f.svg";
+
+/***/ }),
+
+/***/ "./src/images/person.svg":
+/*!*******************************!*\
+  !*** ./src/images/person.svg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/person.21ec2ace.svg";
+
+/***/ }),
+
+/***/ "./src/images/room_service.svg":
+/*!*************************************!*\
+  !*** ./src/images/room_service.svg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/room_service.602bb3ab.svg";
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\index.js";
+
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}), document.getElementById('root')); // If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+
+_serviceWorker__WEBPACK_IMPORTED_MODULE_4__["unregister"]();
+
+/***/ }),
+
+/***/ "./src/serviceWorker.js":
+/*!******************************!*\
+  !*** ./src/serviceWorker.js ***!
+  \******************************/
+/*! exports provided: register, unregister */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unregister", function() { return unregister; });
+// This optional code is used to register a service worker.
+// register() is not called by default.
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
+// To learn more about the benefits of this model and instructions on how to
+// opt-in, read https://bit.ly/CRA-PWA
+const isLocalhost = Boolean(window.location.hostname === 'localhost' || // [::1] is the IPv6 localhost address.
+window.location.hostname === '[::1]' || // 127.0.0.1/8 is considered localhost for IPv4.
+window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+function register(config) {
+  if (false) {}
+}
+
+function registerValidSW(swUrl, config) {
+  navigator.serviceWorker.register(swUrl).then(registration => {
+    registration.onupdatefound = () => {
+      const installingWorker = registration.installing;
+
+      if (installingWorker == null) {
+        return;
+      }
+
+      installingWorker.onstatechange = () => {
+        if (installingWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            // At this point, the updated precached content has been fetched,
+            // but the previous service worker will still serve the older
+            // content until all client tabs are closed.
+            console.log('New content is available and will be used when all ' + 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'); // Execute callback
+
+            if (config && config.onUpdate) {
+              config.onUpdate(registration);
+            }
+          } else {
+            // At this point, everything has been precached.
+            // It's the perfect time to display a
+            // "Content is cached for offline use." message.
+            console.log('Content is cached for offline use.'); // Execute callback
+
+            if (config && config.onSuccess) {
+              config.onSuccess(registration);
+            }
+          }
+        }
+      };
+    };
+  }).catch(error => {
+    console.error('Error during service worker registration:', error);
+  });
+}
+
+function checkValidServiceWorker(swUrl, config) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl).then(response => {
+    // Ensure service worker exists, and that we really are getting a JS file.
+    const contentType = response.headers.get('content-type');
+
+    if (response.status === 404 || contentType != null && contentType.indexOf('javascript') === -1) {
+      // No service worker found. Probably a different app. Reload the page.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          window.location.reload();
+        });
+      });
+    } else {
+      // Service worker found. Proceed as normal.
+      registerValidSW(swUrl, config);
+    }
+  }).catch(() => {
+    console.log('No internet connection found. App is running in offline mode.');
+  });
+}
+
+function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+  }
+}
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************!*\
+  !*** multi ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! D:\2019時光屋\F2E_LEVEL6_HotelReservation\react-hotel-reservation\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! D:\2019時光屋\F2E_LEVEL6_HotelReservation\react-hotel-reservation\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[0,"runtime~main",1]]]);
+//# sourceMappingURL=main.chunk.js.map

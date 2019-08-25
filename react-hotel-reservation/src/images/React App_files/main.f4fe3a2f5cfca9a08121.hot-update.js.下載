@@ -1,0 +1,808 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/reservationDetail.js":
+/*!*********************************************!*\
+  !*** ./src/components/reservationDetail.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return reservationDetail; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-day-picker/DayPickerInput */ "./node_modules/react-day-picker/DayPickerInput.js");
+/* harmony import */ var react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _innerPageHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./innerPageHeader */ "./src/components/innerPageHeader.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-day-picker/lib/style.css */ "./node_modules/react-day-picker/lib/style.css");
+/* harmony import */ var react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_day_picker_lib_style_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+var _jsxFileName = "D:\\2019\u6642\u5149\u5C4B\\F2E_LEVEL6_HotelReservation\\react-hotel-reservation\\src\\components\\reservationDetail.js";
+
+
+
+
+
+
+class reservationDetail extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.handleStartDayChange = this.handleStartDayChange.bind(this);
+    this.handleEndDayChange = this.handleEndDayChange.bind(this);
+    this.submitReservation = this.submitReservation.bind(this); // this.validEmail=this.validEmail.bind(this);
+
+    this.state = {
+      roomDetail: this.props.location.state,
+      formSex: 'W',
+      formFirstname: '',
+      formLastname: '',
+      formTel: '',
+      formEmail: '',
+      formCheckEmail: '',
+      formExtraService: '',
+      endDayFirstDate: '',
+      fisrtNameValid: false,
+      fisrtNameinValid: false,
+      lastNameValid: false,
+      lastNameinValid: false,
+      telValid: false,
+      telinValid: false,
+      emailinValid: false,
+      emailValid: false,
+      checkEmailinValid: false,
+      checkEmailValid: false,
+      selectedStartDay: this.props.location.state.startDay,
+      selectedEndDay: this.props.location.state.endDay,
+      endDayFirstDate: this.props.location.state.startDay.getTime() + 24 * 60 * 60 * 1000,
+      isEmpty: true,
+      isDisabled: false
+    };
+  }
+
+  handleStartDayChange(day, {
+    selected
+  }) {
+    this.setState({
+      selectedStartDay: selected ? undefined : day,
+      endDayFirstDate: selected ? undefined : day.getTime() + 24 * 60 * 60 * 1000
+    });
+
+    if (this.state.selectedEndDay) {
+      if (this.state.selectedEndDay.getTime() <= day.getTime() + 24 * 60 * 60 * 1000) {
+        this.setState({
+          selectedEndDay: undefined
+        }); //   this.computedPricePerRoom(
+        //     day.getDay(),
+        //     day.getTime(),
+        //     undefined,
+        //     undefined
+        //   )
+      } else {// this.computedPricePerRoom(
+          //     day.getDay(),
+          //     day.getTime(),
+          //     this.state.selectedEndDay.getDay(),
+          //     this.state.selectedEndDay.getTime()
+          //   )
+        }
+    }
+  }
+
+  handleEndDayChange(day, {
+    selected
+  }) {
+    if (!this.state.selectedStartDay) {
+      alert('請先選擇入住日期');
+      return;
+    }
+
+    this.setState({
+      selectedEndDay: selected ? undefined : day
+    });
+  }
+
+  getFirstName(e) {
+    let valid = /^[a-zA-Z,]{1,}$/; // console.log(valid.test(e.target.value))
+
+    this.setState({
+      formFirstname: e.target.value,
+      fisrtNameValid: valid.test(e.target.value),
+      fisrtNameinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getLastName(e) {
+    let valid = /^[a-zA-Z]{1,}$/; // console.log(valid.test(e.target.value))
+
+    this.setState({
+      formLastname: e.target.value,
+      lastNameValid: valid.test(e.target.value),
+      lastNameinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getSex(e) {
+    this.setState({
+      formSex: e.target.value
+    });
+  }
+
+  getTel(e) {
+    let valid = /^[0][9][\d]{8}$/;
+    this.setState({
+      formTel: e.target.value,
+      telValid: valid.test(e.target.value),
+      telinValid: !valid.test(e.target.value)
+    });
+  }
+
+  getEmail(e) {
+    if (e.target.value) {
+      let valid = /\w@[\w.]{1,}[^./<>_+=]$/;
+      this.setState({
+        formEmail: e.target.value,
+        emailValid: valid.test(e.target.value),
+        emailinValid: !valid.test(e.target.value)
+      });
+    } else {
+      this.setState({
+        formEmail: e.target.value,
+        emailValid: false,
+        emailinValid: false
+      });
+    }
+  }
+
+  getCheckEmail(e) {
+    if (e.target.value) {
+      let valid = e.target.value === this.state.formEmail ? true : false;
+      this.setState({
+        formCheckEmail: e.target.value,
+        checkEmailValid: valid,
+        checkEmailinValid: !valid
+      });
+    } else {
+      this.setState({
+        formCheckEmail: e.target.value,
+        checkEmailValid: false,
+        checkEmailinValid: false
+      });
+    }
+  }
+
+  getExtraServiceSelect(e) {
+    this.setState({
+      formExtraService: e.target.value
+    });
+  }
+
+  submitReservation() {
+    // alert('完善驗證綁定中')
+    function formatTime(time) {
+      let formatTime = time.split('/');
+
+      if (formatTime[1] < 10) {
+        formatTime[1] = "0".concat(formatTime[1]);
+      }
+
+      if (formatTime[2] < 10) {
+        formatTime[2] = "0".concat(formatTime[2]);
+      }
+
+      return formatTime;
+    }
+
+    let _this$state = this.state,
+        formSex = _this$state.formSex,
+        formFirstname = _this$state.formFirstname,
+        formLastname = _this$state.formLastname,
+        formTel = _this$state.formTel,
+        formEmail = _this$state.formEmail,
+        formCheckEmail = _this$state.formCheckEmail,
+        formExtraService = _this$state.formExtraService,
+        selectedStartDay = _this$state.selectedStartDay,
+        selectedEndDay = _this$state.selectedEndDay;
+    selectedStartDay = selectedStartDay ? formatTime(selectedStartDay.toLocaleDateString()).join('-') : "";
+    selectedEndDay = selectedEndDay ? formatTime(selectedEndDay.toLocaleDateString()).join('-') : "";
+    let submitData = {
+      name: formFirstname + formLastname,
+      tel: formTel,
+      date: [selectedStartDay, selectedEndDay] // console.log(submitData)
+
+    };
+    fetch("https://challenge.thef2e.com/api/thef2e2019/stage6/room/".concat(this.state.roomDetail.id), {
+      method: "POST",
+      headers: new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer i2A9LrARnW0vSgOGpO9E3X7kDM1tZDQwRLDK1qOlXxXtzVKG6ByZN2JXLxqC'
+      }),
+      body: JSON.stringify(submitData)
+    }).then(response => {
+      // withRouter.history.push('/finishedReservation')
+      return response.json();
+    }).then(jsonData => {
+      alert(jsonData);
+    }).catch(error => {
+      alert(error);
+    });
+  }
+
+  render() {
+    const _this$state2 = this.state,
+          selectedStartDay = _this$state2.selectedStartDay,
+          selectedEndDay = _this$state2.selectedEndDay;
+    let disabledEndDays = this.state.endDayFirstDate ? new Date(this.state.endDayFirstDate) : new Date();
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "reservationDetail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 211
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "topArea",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_innerPageHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 213
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "content",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 214
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      className: "content_title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 215
+      },
+      __self: this
+    }, "\uFF0E\u8A02\u55AE\u5167\u5BB9"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 216
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 217
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: this.state.roomDetail.roomImg,
+      alt: "roomImg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 218
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "7",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 220
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 221
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "9",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 222
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "hotTag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 223
+      },
+      __self: this
+    }, "HOT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 224
+      },
+      __self: this
+    }, "\u623F\u578B\u540D\u7A31 : ", this.state.roomDetail.roomName)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      xs: "3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 226
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      className: "linkButton",
+      to: "/innerPage/".concat(this.state.roomDetail.id),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 227
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 228
+      },
+      __self: this
+    }, "\u53D6\u6D88")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_detail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 232
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 233
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 234
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 235
+      },
+      __self: this
+    }, "\u5165\u4F4F\u65E5\u671F : ", this.state.roomDetail.startDay.getFullYear(), " \u5E74 ", this.state.roomDetail.startDay.getMonth() + 1, " \u6708 ", this.state.roomDetail.startDay.getDate(), " \u65E5 ~", this.state.roomDetail.endDay.getFullYear(), " \u5E74 ", this.state.roomDetail.endDay.getMonth() + 1, " \u6708 ", this.state.roomDetail.endDay.getDate(), " \u65E5 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 238
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 239
+      },
+      __self: this
+    }, "\u5165\u4F4F\u4EBA\u6578 : ", this.state.roomDetail.totalPeople)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "firstRow_detail_price",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 241
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "noBreakfast",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 242
+      },
+      __self: this
+    }, "\u4E0D\u542B\u65E9\u9910"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "priceRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243
+      },
+      __self: this
+    }, "\u7E3D\u50F9 NT", this.state.roomDetail.totalPrice, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: this
+    }, this.state.roomDetail.description))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 254
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "reservationTag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 255
+      },
+      __self: this
+    }, "\u8A02\u623F\u8CC7\u6599"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      form: true,
+      className: "datePickerRow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 256
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 257
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 258
+      },
+      __self: this
+    }, "\u5165\u4F4F\u65E5\u671F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 259
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      value: selectedStartDay,
+      onDayChange: this.handleStartDayChange,
+      dayPickerProps: {
+        disabledDays: {
+          before: new Date()
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 272
+      },
+      __self: this
+    }, "\u9000\u623F\u65E5\u671F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 273
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_day_picker_DayPickerInput__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      value: selectedEndDay,
+      onDayChange: this.handleEndDayChange,
+      dayPickerProps: {
+        selectedDays: selectedEndDay,
+        disabledDays: {
+          before: disabledEndDays
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 274
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 286
+      },
+      __self: this
+    }, "\u6B61\u8FCE\u60A8\u7684\u849E\u81E8\uFF0C\u8AA0\u646F\u70BA\u60A8\u670D\u52D9", selectedEndDay && selectedStartDay ? (selectedEndDay.getTime() - selectedStartDay.getTime()) / (24 * 60 * 60 * 1000) : 0, "\u665A")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      form: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 290
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 291
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 292
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 293
+      },
+      __self: this
+    }, "\u59D3\u6C0F(\u82F1\u6587)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.lastNameValid,
+      invalid: this.state.lastNameinValid,
+      value: this.state.formLastname,
+      onChange: e => this.getLastName(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 294
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.lastNameinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 295
+      },
+      __self: this
+    }, "\u5FC5\u9808\u70BA\u82F1\u6587"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 6,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 298
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 299
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 300
+      },
+      __self: this
+    }, "\u59D3\u540D(\u82F1\u6587)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.fisrtNameValid,
+      invalid: this.state.fisrtNameinValid,
+      value: this.state.formFirstname,
+      onChange: e => this.getFirstName(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 301
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.fisrtNameinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: this
+    }, "\u5FC5\u586B\uFF0C\u683C\u5F0F\u70BA\u82F1\u6587"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+      md: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 305
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 306
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 307
+      },
+      __self: this
+    }, "\u7A31\u8B02"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "select",
+      name: "select",
+      id: "exampleSelect",
+      value: this.state.formSex,
+      onChange: e => this.getSex(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 308
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "W",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 309
+      },
+      __self: this
+    }, "\u5973\u58EB"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "M",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 310
+      },
+      __self: this
+    }, "\u7537\u58EB"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 318
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "exampleEmail",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 319
+      },
+      __self: this
+    }, "\u9023\u7D61\u96FB\u8A71"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.telValid,
+      invalid: this.state.telinValid,
+      value: this.state.formTel,
+      onChange: e => this.getTel(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 320
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.telinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 321
+      },
+      __self: this
+    }, "\u624B\u6A5F\u683C\u5F0F\u932F\u8AA4(ex:0912345678)")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 323
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 324
+      },
+      __self: this
+    }, "\u96FB\u5B50\u4FE1\u7BB1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.emailValid,
+      invalid: this.state.emailinValid,
+      value: this.state.formEmail,
+      onChange: e => this.getEmail(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 325
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.emailinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 326
+      },
+      __self: this
+    }, "\u4FE1\u7BB1\u683C\u5F0F\u932F\u8AA4\uFF0C\u5305\u542B\uFF20\u4E0D\u5F97\u5DF2\u7279\u6B8A\u5B57\u5143\u70BA\u6700\u5F8C\u4E00\u5B57\u5143")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 329
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      for: "examplePassword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 330
+      },
+      __self: this
+    }, "\u78BA\u8A8D\u4FE1\u7BB1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      valid: this.state.checkEmailValid,
+      invalid: this.state.checkEmailinValid,
+      value: this.state.formCheckEmail,
+      onChange: e => this.getCheckEmail(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 331
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormFeedback"], {
+      invalid: this.state.checkEmailinValid,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 332
+      },
+      __self: this
+    }, "\u8207\u4E0A\u5217\u4E0D\u76F8\u7B26")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+      className: "extraService",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 334
+      },
+      __self: this
+    }, "\u984D\u5916\u52A0\u50F9\u670D\u52D9"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      className: "radioGroup",
+      tag: "fieldset",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 335
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], {
+      check: true,
+      value: this.state.formExtraService,
+      onChange: e => this.getExtraServiceSelect(e),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 336
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      check: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 337
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "radio",
+      name: "radio1",
+      value: "breakfast",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 338
+      },
+      __self: this
+    }), ' ', "\u65E9\u9910\xA0\xA0\xA0$320/1\u4EBA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      check: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 341
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Input"], {
+      type: "radio",
+      name: "radio1",
+      value: "driveTour",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 342
+      },
+      __self: this
+    }), ' ', "\u79DF\u8ECA\u65C5\u904A\xA0\xA0\xA0$2200/1\u65E5"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      className: "linkButton",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 347
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      disabled: false,
+      onClick: this.submitReservation,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 348
+      },
+      __self: this
+    }, "\u78BA\u8A8D\u8A02\u623F"))))));
+  }
+
+}
+
+/***/ })
+
+})
+//# sourceMappingURL=main.f4fe3a2f5cfca9a08121.hot-update.js.map
