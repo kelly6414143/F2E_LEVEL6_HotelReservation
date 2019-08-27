@@ -11,11 +11,10 @@ import {
     Label, 
     Input, 
     FormFeedback, 
-    FormText,
     Button
     } from 'reactstrap';
 
-export default class reservationDetail extends Component {
+class reservationDetail extends Component {
     constructor(props){
         super(props)
         this.handleStartDayChange = this.handleStartDayChange.bind(this)
@@ -31,7 +30,6 @@ export default class reservationDetail extends Component {
             formEmail: '',
             formCheckEmail: '',
             formExtraService:'',
-            endDayFirstDate:'',
             fisrtNameValid:false,
             fisrtNameinValid:false,
             lastNameValid:false,
@@ -45,8 +43,6 @@ export default class reservationDetail extends Component {
             selectedStartDay: this.props.location.state.startDay,
             selectedEndDay: this.props.location.state.endDay,
             endDayFirstDate: this.props.location.state.startDay.getTime()+24*60*60*1000,
-            isEmpty: true,
-            isDisabled: false,
         };
        
     }
@@ -95,7 +91,7 @@ export default class reservationDetail extends Component {
         this.setState({
             formFirstname:e.target.value,
             fisrtNameValid:valid.test(e.target.value),
-            fisrtNameinValid:!valid.test(e.target.value)
+            fisrtNameinValid:!valid.test(e.target.value)?true:false
         });
     }
     getLastName(e){
@@ -104,7 +100,7 @@ export default class reservationDetail extends Component {
         this.setState({
             formLastname:e.target.value,
             lastNameValid:valid.test(e.target.value),
-            lastNameinValid:!valid.test(e.target.value)
+            lastNameinValid:!valid.test(e.target.value)?true:false
         });
     }
     getSex(e){
@@ -117,7 +113,7 @@ export default class reservationDetail extends Component {
         this.setState({
             formTel:e.target.value,
             telValid:valid.test(e.target.value),
-            telinValid:!valid.test(e.target.value)
+            telinValid:!valid.test(e.target.value)?true:false
         });
     }
     getEmail(e){
@@ -126,7 +122,7 @@ export default class reservationDetail extends Component {
             this.setState({
                 formEmail:e.target.value,
                 emailValid:valid.test(e.target.value),
-                emailinValid:!valid.test(e.target.value)
+                emailinValid:!valid.test(e.target.value)?true:false
             });
         }else{
             this.setState({
@@ -142,7 +138,7 @@ export default class reservationDetail extends Component {
             this.setState({
                 formCheckEmail:e.target.value,
                 checkEmailValid:valid,
-                checkEmailinValid:!valid
+                checkEmailinValid:!valid?true:false
             });
         }else{
             this.setState({
@@ -154,7 +150,7 @@ export default class reservationDetail extends Component {
     }
     getExtraServiceSelect(e){
         this.setState({
-            formExtraService:e.target.value
+            formExtraService:e.target.value?true:false
         });
     }
 
@@ -168,23 +164,38 @@ export default class reservationDetail extends Component {
         }
 
         let{
-            formSex,
             formFirstname,
             formLastname,
             formTel,
-            formEmail,
-            formCheckEmail,
-            formExtraService,
+            fisrtNameValid,
+            lastNameValid,
+            telValid,
             selectedStartDay,
             selectedEndDay}=this.state
-            selectedStartDay =selectedStartDay?formatTime(selectedStartDay.toLocaleDateString()).join('-') :""
-            selectedEndDay = selectedEndDay? formatTime(selectedEndDay.toLocaleDateString()).join('-'):""
+            let dateArr=[]
+            let startTime = selectedStartDay.getTime()
+            let endTime = selectedEndDay.getTime()
+            let time_diff = endTime - startTime
+         
+            for(let i=0; i<= time_diff; i+=86400000){
+                let rangeDate = new Date(startTime+i);
+                dateArr.push(formatTime(rangeDate.toLocaleDateString()).join('-'))
+            }
         let submitData = {
             name: formFirstname + formLastname,
             tel: formTel,
-            date: [selectedStartDay,selectedEndDay]
+            date: dateArr
         }
-        // console.log(submitData)
+
+        if(!fisrtNameValid || !lastNameValid || !telValid){
+            this.setState({
+                fisrtNameinValid:!fisrtNameValid,
+                lastNameinValid:!lastNameValid,
+                telinValid:!telValid
+            });
+            return
+        }
+
         fetch(`https://challenge.thef2e.com/api/thef2e2019/stage6/room/${this.state.roomDetail.id}`,
             {
             method:"POST",
@@ -195,19 +206,26 @@ export default class reservationDetail extends Component {
             }),
             body: JSON.stringify(submitData)
         }).then(response =>{
-                // withRouter.history.push('/finishedReservation')
-                // console.log(response.json());
                 return response.json(); 
             }).then((jsonData) => {
-                console.log(jsonData);
+                if(jsonData.success){
+                    this.props.history.push('/finishedReservation')
+                    console.log(jsonData)
+                }else{
+                    alert(jsonData.message)
+                }   
             }).catch((error)=>{
                 alert(error)
             })
     } 
 
       render() {
-        const { selectedStartDay,selectedEndDay} = this.state;
+        const { selectedStartDay,selectedEndDay,roomDetail} = this.state;
+        console.log(roomDetail)
+        // console.log(bookingData && bookingData.length)
+
         let disabledEndDays = this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date()
+        // let disabledForBooking = 
         return (
             <div className="reservationDetail">
                 <div className="topArea">
@@ -263,7 +281,7 @@ export default class reservationDetail extends Component {
                                                 onDayChange={this.handleStartDayChange}
                                                 dayPickerProps={{
                                                     disabledDays: {
-                                                        before: new Date(),
+                                                        before: new Date(new Date().getTime()+24*60*60*1000),
                                                     },
                                                 }}
                                             />
@@ -293,14 +311,14 @@ export default class reservationDetail extends Component {
                                         <FormGroup>
                                             <Label for="exampleEmail">姓氏(英文)</Label>
                                             <Input valid={this.state.lastNameValid} invalid={this.state.lastNameinValid} value={this.state.formLastname} onChange = {(e) => this.getLastName(e)}/>
-                                            <FormFeedback invalid={this.state.lastNameinValid}>必須為英文</FormFeedback>
+                                            <FormFeedback invalid={this.state.lastNameinValid.toString()}>必填，格式為英文</FormFeedback>
                                         </FormGroup>
                                     </Col>
                                     <Col md={6}>
                                         <FormGroup>
                                             <Label for="examplePassword">姓名(英文)</Label>
                                             <Input valid={this.state.fisrtNameValid} invalid={this.state.fisrtNameinValid} value={this.state.formFirstname} onChange = {(e) => this.getFirstName(e)}/>
-                                            <FormFeedback invalid={this.state.fisrtNameinValid}>必填，格式為英文</FormFeedback>
+                                            <FormFeedback invalid={this.state.fisrtNameinValid.toString()}>必填，格式為英文</FormFeedback>
                                         </FormGroup>
                                     </Col>
                                     <Col md={3}>
@@ -319,18 +337,18 @@ export default class reservationDetail extends Component {
                                 <FormGroup>
                                     <Label for="exampleEmail">連絡電話</Label>
                                     <Input  valid={this.state.telValid} invalid={this.state.telinValid} value={this.state.formTel} onChange = {(e) => this.getTel(e)}/>
-                                    <FormFeedback invalid={this.state.telinValid}>手機格式錯誤(ex:0912345678)</FormFeedback>
+                                    <FormFeedback invalid={this.state.telinValid.toString()}>必填，手機格式錯誤(ex:0912345678)</FormFeedback>
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="examplePassword">電子信箱</Label>
                                     <Input valid={this.state.emailValid} invalid={this.state.emailinValid} value={this.state.formEmail} onChange = {(e) => this.getEmail(e)}/>
-                                    <FormFeedback invalid={this.state.emailinValid}>信箱格式錯誤，包含＠不得已特殊字元為最後一字元</FormFeedback>
+                                    <FormFeedback invalid={this.state.emailinValid.toString()}>信箱格式錯誤，包含＠不得已特殊字元為最後一字元</FormFeedback>
                                     
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="examplePassword">確認信箱</Label>
                                     <Input valid={this.state.checkEmailValid} invalid={this.state.checkEmailinValid} value={this.state.formCheckEmail} onChange = {(e) => this.getCheckEmail(e)} />
-                                    <FormFeedback invalid={this.state.checkEmailinValid}>與上列不相符</FormFeedback>
+                                    <FormFeedback invalid={this.state.checkEmailinValid.toString()}>與上列不相符</FormFeedback>
                                 </FormGroup>
                                 <Row className="extraService">額外加價服務</Row>
                                 <FormGroup className="radioGroup"　tag="fieldset">
@@ -345,9 +363,9 @@ export default class reservationDetail extends Component {
                                         </Label>
                                     </FormGroup>
                                 </FormGroup>
-                                <Link className="linkButton">
+                                <Row className="linkButton">
                                     <Button disabled={false} onClick={this.submitReservation}>確認訂房</Button>
-                                </Link>
+                                </Row>
                             </Form>
                     </div>
                 </div>
@@ -356,3 +374,4 @@ export default class reservationDetail extends Component {
       }
   }
 
+  export default withRouter(reservationDetail);

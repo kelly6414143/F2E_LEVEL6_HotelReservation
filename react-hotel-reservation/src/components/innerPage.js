@@ -200,6 +200,7 @@ export default class InnerPage extends Component {
         }).then(response =>{
             response.json().then(res=>{
                 this.setState({
+                    hotelBookingData: res.booking,
                     hotelRoomData: res.room[0],
                     checkInEarly: res.room[0].checkInAndOut.checkInEarly.split(':')[0],
                     checkInLate: res.room[0].checkInAndOut.checkInLate.split(':')[0],
@@ -210,7 +211,24 @@ export default class InnerPage extends Component {
       }
 
       render() {
-        let disabledEndDays = this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date()
+        let disabledBookingDays = []
+        if(this.state.hotelBookingData && Object.keys(this.state.hotelBookingData).length>0){
+            disabledBookingDays = this.state.hotelBookingData.map((data)=>{
+                let formatDate = new Date(data.date)
+                return formatDate
+            })
+        }
+
+        let disabledStartDays = [
+            {before:new Date(new Date().getTime()+24*60*60*1000)},
+            disabledBookingDays]
+            disabledStartDays = disabledStartDays.flat()            
+
+        let disabledEndDays = [
+            {before:this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date(new Date().getTime()+24*60*60*1000)},
+            disabledBookingDays]
+        disabledEndDays = disabledEndDays.flat()
+        // console.log(this.state.hotelBookingData)
         let pathData = {pathname:'/reservationDetail',
         state:{
             id: this.state.hotelRoomData?this.state.hotelRoomData.id:'',
@@ -220,8 +238,9 @@ export default class InnerPage extends Component {
             startDay: this.state.selectedStartDay,
             endDay: this.state.selectedEndDay,
             totalPeople: Number(this.state.adultNum)+Number(this.state.childNum),
-            totalPrice: this.state.hotelRoomData?this.state.roomNum*(this.state.holiday*this.state.hotelRoomData.holidayPrice + this.state.normalDay*this.state.hotelRoomData.normalDayPrice):''}
-            
+            totalPrice: this.state.hotelRoomData?this.state.roomNum*(this.state.holiday*this.state.hotelRoomData.holidayPrice + this.state.normalDay*this.state.hotelRoomData.normalDayPrice):''},
+            // bookingData: this.state.hotelBookingData?this.state.hotelBookingData:'',
+            bookingData:"kk"
         }
 
         let linkBtnDisable = this.state.adultNum>0 && this.state.childNum>=0 && this.state.selectedStartDay && this.state.selectedEndDay && this.state.roomNum>0 ? false : true
@@ -340,21 +359,13 @@ export default class InnerPage extends Component {
                                             <DayPicker
                                             selectedDays={this.state.selectedStartDay}
                                             onDayClick={this.handleStartDayClick}
-                                            disabledDays={[
-                                                {
-                                                  before: new Date(),
-                                                },
-                                              ]}/>
+                                            disabledDays={disabledStartDays}/>
                                         </Col>
                                         <Col>
                                             <DayPicker
                                             selectedDays={this.state.selectedEndDay}
                                             onDayClick={this.handleEndDayClick}
-                                            disabledDays={[
-                                                {
-                                                  before: disabledEndDays,
-                                                },
-                                              ]}
+                                            disabledDays={disabledEndDays}
                                             />
                                         </Col>
                                     </Row>
