@@ -238,9 +238,8 @@ export default class InnerPage extends Component {
             startDay: this.state.selectedStartDay,
             endDay: this.state.selectedEndDay,
             totalPeople: Number(this.state.adultNum)+Number(this.state.childNum),
-            totalPrice: this.state.hotelRoomData?this.state.roomNum*(this.state.holiday*this.state.hotelRoomData.holidayPrice + this.state.normalDay*this.state.hotelRoomData.normalDayPrice):''},
-            // bookingData: this.state.hotelBookingData?this.state.hotelBookingData:'',
-            bookingData:"kk"
+            totalPrice: this.state.hotelRoomData?this.state.roomNum*(this.state.holiday*this.state.hotelRoomData.holidayPrice + this.state.normalDay*this.state.hotelRoomData.normalDayPrice):'',
+            bookingData: this.state.hotelBookingData?this.state.hotelBookingData:'',},
         }
 
         let linkBtnDisable = this.state.adultNum>0 && this.state.childNum>=0 && this.state.selectedStartDay && this.state.selectedEndDay && this.state.roomNum>0 ? false : true

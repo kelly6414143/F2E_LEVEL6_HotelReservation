@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter,Route,Redirect} from 'react-router-dom';
+import {HashRouter,Route} from 'react-router-dom';
 import Home from './components/home';
 import Footer from './components/footer';
 import InnerPage from './components/innerPage'

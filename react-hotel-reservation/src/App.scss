@@ -51,7 +51,7 @@ span.hotTag{
     padding: 3px 7px 5px;
 }
 
-a.linkButton{
+a.linkButton, .row.linkButton{
     color: white;
     button{
         background-color: $lightGreen !important;

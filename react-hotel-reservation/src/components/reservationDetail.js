@@ -210,7 +210,7 @@ class reservationDetail extends Component {
             }).then((jsonData) => {
                 if(jsonData.success){
                     this.props.history.push('/finishedReservation')
-                    console.log(jsonData)
+                    // console.log(jsonData)
                 }else{
                     alert(jsonData.message)
                 }   
@@ -221,10 +221,26 @@ class reservationDetail extends Component {
 
       render() {
         const { selectedStartDay,selectedEndDay,roomDetail} = this.state;
-        console.log(roomDetail)
+        // console.log(roomDetail.bookingData)
         // console.log(bookingData && bookingData.length)
+        let disabledBookingDays = []
+        if(roomDetail.bookingData && Object.keys(roomDetail.bookingData).length>0){
+            disabledBookingDays = roomDetail.bookingData.map((data)=>{
+                let formatDate = new Date(data.date)
+                return formatDate
+            })
+        }
 
-        let disabledEndDays = this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date()
+        let disabledStartDays = [
+            {before:new Date(new Date().getTime()+24*60*60*1000)},
+            disabledBookingDays]
+            disabledStartDays = disabledStartDays.flat()        
+
+        let disabledEndDays = [
+            {before:this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date(new Date().getTime()+24*60*60*1000)},
+            disabledBookingDays]
+        disabledEndDays = disabledEndDays.flat()
+        // let disabledEndDays = this.state.endDayFirstDate?new Date(this.state.endDayFirstDate):new Date()
         // let disabledForBooking = 
         return (
             <div className="reservationDetail">
@@ -280,9 +296,7 @@ class reservationDetail extends Component {
                                                 value={selectedStartDay}
                                                 onDayChange={this.handleStartDayChange}
                                                 dayPickerProps={{
-                                                    disabledDays: {
-                                                        before: new Date(new Date().getTime()+24*60*60*1000),
-                                                    },
+                                                    disabledDays: disabledStartDays,
                                                 }}
                                             />
                                         </FormGroup>
@@ -295,9 +309,7 @@ class reservationDetail extends Component {
                                                 onDayChange={this.handleEndDayChange}
                                                 dayPickerProps={{
                                                     selectedDays: selectedEndDay,
-                                                    disabledDays: {
-                                                        before:disabledEndDays
-                                                    },
+                                                    disabledDays:disabledEndDays,
                                                 }}
                                             />
                                         </FormGroup>
